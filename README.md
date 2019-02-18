@@ -1,5 +1,8 @@
 # eslint-config-standardize
 
+[![License][license-badge]][license-url]
+[![npm Version][npm-badge]][npm-url]
+
 This is **WIP**
 
 ## Setup
@@ -190,3 +193,8 @@ export default (
 If you are usar 'Prettier - Code formatter', don't set the `prettier.eslintIntegration` option on React projects.
 
 I'm working in an alternative.
+
+[license-badge]:  https://img.shields.io/badge/license-MIT-blue.svg?style=flat
+[license-url]:    https://github.com/aMarCruz/eslint-config-standardize/blob/master/LICENSE
+[npm-badge]:      https://img.shields.io/npm/v/eslint-config-standardize.svg
+[npm-url]:        https://www.npmjs.com/package/eslint-config-standardize
