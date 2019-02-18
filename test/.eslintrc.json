@@ -1,0 +1,15 @@
+{
+  "root": true,
+  "extends": [
+    "./eslint.json",
+    "../typescript/index.js"
+  ],
+  "overrides": [
+    {
+      "files": ["*.tsx"],
+      "rules": {
+        "semi": [2, "always"]
+      }
+    }
+  ]
+}

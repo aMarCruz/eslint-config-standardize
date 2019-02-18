@@ -1,0 +1,177 @@
+{
+  "plugins": ["unicorn"],
+
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+
+  "extends": ["standard", "standard-jsx"],
+
+  "rules": {
+    "comma-dangle": [2, "always-multiline", {
+      "arrays": "always",
+      "objects": "always",
+      "imports": "always",
+      "exports": "always",
+      "functions": "never"
+    }],
+    "jsx-quotes": [2, "prefer-double"],
+    "spaced-comment": [2, "always", {
+      "block": {
+        "exceptions": [],
+        "markers": ["!"],
+        "balanced": true
+      },
+      "line": {
+        "exceptions": ["-", "="],
+        "markers": ["/", "!", "#region", "#endregion", "#"]
+      }
+    }],
+    "wrap-iife": [2, "inside"],
+    "quote-props": [2, "consistent-as-needed"],
+
+    "arrow-parens": 2,
+    "default-case": [1, { "commentPattern": "^no default$" }],
+    "max-len": [2, {
+      "code": 92,
+      "ignoreUrls": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true,
+      "ignoreRegExpLiterals": true
+    }],
+    "no-alert": 2,
+    "no-async-promise-executor": 2,
+    "no-await-in-loop": 2,
+    "no-catch-shadow": 2,
+    "no-confusing-arrow": [2, { "allowParens": true }],
+    "no-div-regex": 2,
+    "no-duplicate-imports": 2,
+    "no-else-return": 2,
+    "no-extra-label": 2,
+    "no-extra-semi": 2,
+    "no-implicit-globals": 2,
+    "no-lonely-if": 2,
+    "no-loop-func": 2,
+    "no-native-reassign": 2,
+    "no-process-exit": 2,
+    "no-prototype-builtins": 2,
+    "no-restricted-globals": ["error", "title", "status", "self"],
+    "no-restricted-syntax": [2, "WithStatement"],
+    "no-script-url": 2,
+    "getter-return": 2,
+    "no-shadow": 2,
+    "no-spaced-func": 2,
+    "no-unused-labels": 2,
+    "no-useless-concat": 2,
+    "one-var-declaration-per-line": 2,
+    "padded-blocks": [2, "never"],
+    "prefer-const": [2, { "destructuring": "all" }],
+    "prefer-numeric-literals": 2,
+    "radix": 2,
+    "require-atomic-updates": 2,
+    "require-await": 2,
+    "require-yield": 2,
+    "sort-imports": [2, {
+      "ignoreCase": true,
+      "ignoreDeclarationSort": true,
+      "ignoreMemberSort": false,
+      "memberSyntaxSortOrder": ["all", "single", "multiple", "none"]
+    }],
+    "switch-colon-spacing": [2, { "after": true }],
+    "strict": [2, "never"],
+    "linebreak-style": [2, "unix"],
+
+    "prefer-arrow-callback": 0,
+    "arrow-body-style": [2, "as-needed"],
+    "no-useless-constructor": 0,
+
+    "promise/always-return": 2,
+    "promise/catch-or-return": [2, { "terminationMethod": ["catch", "finally"] }],
+    "promise/no-callback-in-promise": 2,
+    "promise/no-nesting": 1,
+    "promise/no-new-statics": 2,
+    "promise/no-return-in-finally": 2,
+    "promise/no-return-wrap": [2, { "allowReject": true }],
+    "promise/valid-params": 2,
+
+    "import/default": 2,
+    "import/named": 2,
+    "import/namespace": 2,
+    "import/no-absolute-path": 2,
+    "import/no-amd": 2,
+    "import/no-cycle": [2, { "maxDepth": 2 }],
+    "import/no-deprecated": 1,
+    "import/no-dynamic-require": 2,
+    "import/no-mutable-exports": 2,
+    "import/no-named-as-default-member": 2,
+    "import/no-named-as-default": 2,
+    "import/no-nodejs-modules": 2,
+    "import/no-self-import": 2,
+    "import/no-unresolved": 2,
+    "import/no-useless-path-segments": 1,
+    "import/no-webpack-loader-syntax": 2,
+    "import/order": [1, {"groups": ["builtin", "external", "internal", "parent", "sibling", "index"]}],
+
+    "unicorn/custom-error-definition": 2,
+    "unicorn/error-message": 2,
+    "unicorn/escape-case": 2,
+    "unicorn/new-for-builtins": 2,
+    "unicorn/no-array-instanceof": 2,
+    "unicorn/no-new-buffer": 2,
+    "unicorn/no-process-exit": 2,
+    "unicorn/no-unreadable-array-destructuring": 2,
+    "unicorn/no-unused-properties": 2,
+    "unicorn/number-literal-case": 2,
+    "unicorn/prefer-add-event-listener": 2,
+    "unicorn/prefer-spread": 2,
+    "unicorn/prefer-type-error": 2,
+    "unicorn/regex-shorthand": 2,
+
+    "node/no-unpublished-bin": 2,
+    "node/no-unsupported-features/node-builtins": 2,
+    "node/shebang": 2,
+
+    "react/button-has-type": 2,
+    "react/forbid-foreign-prop-types": [2, { "allowInPropTypes": true }],
+    "react/jsx-closing-bracket-location": [2, "line-aligned"],
+    "react/jsx-fragments": 2,
+    "react/jsx-handler-names": 2,
+    "react/jsx-indent": [2, 2, { "checkAttributes": true }],
+    "react/jsx-indent-props": [2, 2],
+    "react/jsx-key": 2,
+    "react/jsx-max-depth": [2, { "max": 5 }],
+    "react/jsx-no-comment-textnodes": 1,
+    "react/jsx-no-target-blank": 1,
+    "react/jsx-pascal-case": [1, { "allowAllCaps": true, "ignore": [] }],
+    "react/jsx-props-no-multi-spaces": 2,
+    "react/no-danger-with-children": 2,
+    "react/no-deprecated": 1,
+    "react/no-direct-mutation-state": 2,
+    "react/no-is-mounted": 1,
+    "react/no-multi-comp": [2, { "ignoreStateless": true }],
+    "react/no-redundant-should-component-update": 2,
+    "react/no-string-refs": 2,
+    "react/no-typos": 2,
+    "react/no-unescaped-entities": [2, {"forbid": [">", "\"", "'", "}"]}],
+    "react/no-unknown-property": 2,
+    "react/no-will-update-set-state": 2,
+    "react/react-in-jsx-scope": 2,
+    "react/require-render-return": 2,
+    "react/self-closing-comp": 2,
+    "react/sort-comp": [2, null],
+    "react/style-prop-object": 2,
+    "react/void-dom-elements-no-children": 2
+  },
+
+  "overrides": [
+    {
+      "files": ["*.jsx"],
+      "rules": {
+        "import/named": 0,
+        "no-use-before-define": 0
+      }
+    }
+  ]
+}
