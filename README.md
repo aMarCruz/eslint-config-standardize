@@ -7,12 +7,12 @@ This is **WIP**
 
 ## Setup
 
-Install from npm
+Install from npm (omit eslint if it's already installed or you are using CRA).
 
 ```sh
-npm i eslint-config-standardize -D
+npm i eslint eslint-config-standardize -D
 # or
-yarn add eslint-config-standardize -D
+yarn add eslint eslint-config-standardize -D
 ```
 
 In your ESLint config file:
@@ -29,6 +29,10 @@ module.exports = {
 ```
 
 If you are using TypeScript add "standardize/typescript" in "extends".
+
+```bash
+yarn add @@typescript-eslint/eslint-plugin
+```
 
 ```js
 // .eslintrc.js
