@@ -15,24 +15,12 @@ module.exports = {
   },
   rules: {
     'import/no-nodejs-modules': OFF,
-    'node/exports-style': [ON, 'module.exports'],
     'node/no-deprecated-api': ON,
     'node/no-extraneous-import': ON,
     'node/no-extraneous-require': ON,
     'node/no-unpublished-bin': ON,
     'node/no-unpublished-require': ON,
-    'node/no-unsupported-features/es-builtins': ON,
-    'node/no-unsupported-features/es-syntax': ON,
     'node/no-unsupported-features/node-builtins': OFF,
+    'node/shebang': 2,
   },
-  overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-      rules: {
-        'node/exports-style': OFF,
-        'node/no-unsupported-features/es-builtins': OFF,
-        'node/no-unsupported-features/es-syntax': OFF,
-      },
-    },
-  ],
 }

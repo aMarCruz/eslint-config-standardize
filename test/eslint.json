@@ -1,12 +1,23 @@
 {
-  "plugins": [
-    "unicorn"
-  ],
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
   },
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "plugins": [
+    "import",
+    "node",
+    "promise",
+    "standard",
+    "unicorn",
+    "react"
+  ],
   "extends": [
     "standard",
     "standard-jsx"
@@ -36,8 +47,8 @@
             "*"
           ],
           "markers": [
-            "!",
             "*package",
+            "!",
             ",",
             ":",
             "::",
@@ -51,14 +62,14 @@
             "="
           ],
           "markers": [
-            "/",
+            "*package",
             "!",
+            "/",
+            ",",
+            "=",
             "#region",
             "#endregion",
-            "#",
-            "*package",
-            ",",
-            "="
+            "#"
           ]
         }
       }
@@ -256,7 +267,6 @@
     "import/named": 2,
     "import/namespace": 2,
     "import/no-absolute-path": 2,
-    "import/no-amd": 2,
     "import/no-cycle": [
       2,
       {
@@ -268,21 +278,15 @@
     "import/no-mutable-exports": 2,
     "import/no-named-as-default-member": 2,
     "import/no-named-as-default": 2,
-    "import/no-nodejs-modules": 2,
     "import/no-self-import": 2,
     "import/no-unresolved": 2,
     "import/no-useless-path-segments": 1,
-    "import/no-webpack-loader-syntax": 2,
     "import/order": [
       1,
       {
         "groups": [
           "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index"
+          "external"
         ]
       }
     ],
@@ -302,7 +306,6 @@
     "unicorn/regex-shorthand": 2,
     "node/no-unpublished-bin": 2,
     "node/no-unsupported-features/node-builtins": 2,
-    "node/shebang": 2,
     "react/button-has-type": 2,
     "react/forbid-foreign-prop-types": [
       2,
@@ -310,12 +313,6 @@
         "allowInPropTypes": true
       }
     ],
-    "react/jsx-closing-bracket-location": [
-      2,
-      "line-aligned"
-    ],
-    "react/jsx-fragments": 2,
-    "react/jsx-handler-names": 2,
     "react/jsx-indent": [
       2,
       2,
@@ -335,7 +332,6 @@
       }
     ],
     "react/jsx-no-comment-textnodes": 1,
-    "react/jsx-no-target-blank": 1,
     "react/jsx-pascal-case": [
       1,
       {
@@ -344,7 +340,6 @@
       }
     ],
     "react/jsx-props-no-multi-spaces": 2,
-    "react/no-danger-with-children": 2,
     "react/no-deprecated": 1,
     "react/no-direct-mutation-state": 2,
     "react/no-is-mounted": 1,
@@ -373,49 +368,6 @@
     "react/react-in-jsx-scope": 2,
     "react/require-render-return": 2,
     "react/self-closing-comp": 2,
-    "react/sort-comp": [
-      2,
-      {
-        "order": [
-          "type-annotations",
-          "static-methods",
-          "types",
-          "instance-variables",
-          "getters",
-          "setters",
-          "lifecycle",
-          "everything-else",
-          "rendering"
-        ],
-        "groups": {
-          "types": [
-            "mixins",
-            "displayName",
-            "contextTypes",
-            "childContextTypes",
-            "propTypes",
-            "defaultProps",
-            "statics"
-          ],
-          "getters": [],
-          "setters": [],
-          "lifecycle": [
-            "state",
-            "constructor",
-            "componentDidCatch",
-            "componentDidMount",
-            "shouldComponentUpdate",
-            "getSnapshotBeforeUpdate",
-            "componentDidUpdate",
-            "componentWillUnmount"
-          ],
-          "rendering": [
-            "/^render.+$/",
-            "render"
-          ]
-        }
-      }
-    ],
     "react/style-prop-object": 2,
     "react/void-dom-elements-no-children": 2
   },
@@ -429,5 +381,10 @@
         "no-use-before-define": 0
       }
     }
-  ]
+  ],
+  "settings": {
+    "react": {
+      "version": "16.8.2"
+    }
+  }
 }

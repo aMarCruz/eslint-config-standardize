@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-standardize",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "./index.js",
   "author": "aMarCruz <amarcruzbox-git@yahoo.com>",
   "description": "Personal configuration based on standard, ready for JavaScript and TypeScript",
@@ -30,14 +30,15 @@
     "type": "git"
   },
   "dependencies": {
+    "@jsbits/deep-clone": "^1.1.1",
     "confusing-browser-globals": "*",
-    "eslint-config-standard": "~12.0.0",
-    "eslint-config-standard-jsx": "~6.0.2",
-    "eslint-plugin-import": "~2.14.0",
-    "eslint-plugin-node": "~7.0.1",
-    "eslint-plugin-promise": "~4.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard-jsx": "^6.0.2",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.0",
+    "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-react": "^7.12.4",
-    "eslint-plugin-standard": "~4.0.0",
+    "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-unicorn": "^7.1.0"
   },
   "devDependencies": {

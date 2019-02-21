@@ -1,38 +1,51 @@
 {
-  "plugins": ["unicorn"],
-
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
   },
 
-  "extends": ["standard", "standard-jsx"],
+  "env": {
+    "es6": true,
+    "node": true
+  },
+
+  "plugins": [
+    "import",
+    "node",
+    "promise",
+    "standard",
+    "unicorn"
+  ],
+
+  "extends": ["standard"],
 
   "rules": {
-    "comma-dangle": [2, "always-multiline", {
-      "arrays": "always",
-      "objects": "always",
-      "imports": "always",
-      "exports": "always",
+    "comma-dangle": [2, {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
       "functions": "never"
     }],
     "jsx-quotes": [2, "prefer-double"],
     "spaced-comment": [2, "always", {
       "block": {
-        "exceptions": [],
-        "markers": ["!"],
+        "exceptions": ["*"],
+        "markers": ["*package", "!", ",", ":", "::", "flow-include"],
         "balanced": true
       },
       "line": {
         "exceptions": ["-", "="],
-        "markers": ["/", "!", "#region", "#endregion", "#"]
+        "markers": ["*package", "!", "/", ",", "=", "#region", "#endregion", "#"]
       }
     }],
     "wrap-iife": [2, "inside"],
     "quote-props": [2, "consistent-as-needed"],
 
-    "arrow-parens": 2,
+    "arrow-parens": [2, "as-needed", { "requireForBlockBody": true }],
     "default-case": [1, { "commentPattern": "^no default$" }],
     "max-len": [2, {
       "code": 92,
@@ -80,7 +93,6 @@
       "memberSyntaxSortOrder": ["all", "single", "multiple", "none"]
     }],
     "switch-colon-spacing": [2, { "after": true }],
-    "strict": [2, "never"],
     "linebreak-style": [2, "unix"],
 
     "prefer-arrow-callback": 0,
@@ -100,19 +112,16 @@
     "import/named": 2,
     "import/namespace": 2,
     "import/no-absolute-path": 2,
-    "import/no-amd": 2,
     "import/no-cycle": [2, { "maxDepth": 2 }],
     "import/no-deprecated": 1,
     "import/no-dynamic-require": 2,
     "import/no-mutable-exports": 2,
     "import/no-named-as-default-member": 2,
     "import/no-named-as-default": 2,
-    "import/no-nodejs-modules": 2,
     "import/no-self-import": 2,
     "import/no-unresolved": 2,
     "import/no-useless-path-segments": 1,
-    "import/no-webpack-loader-syntax": 2,
-    "import/order": [1, {"groups": ["builtin", "external", "internal", "parent", "sibling", "index"]}],
+    "import/order": [1, {"groups": ["builtin", "external"]}],
 
     "unicorn/custom-error-definition": 2,
     "unicorn/error-message": 2,
@@ -130,39 +139,7 @@
     "unicorn/regex-shorthand": 2,
 
     "node/no-unpublished-bin": 2,
-    "node/no-unsupported-features/node-builtins": 2,
-    "node/shebang": 2,
-
-    "react/button-has-type": 2,
-    "react/forbid-foreign-prop-types": [2, { "allowInPropTypes": true }],
-    "react/jsx-closing-bracket-location": [2, "line-aligned"],
-    "react/jsx-fragments": 2,
-    "react/jsx-handler-names": 2,
-    "react/jsx-indent": [2, 2, { "checkAttributes": true }],
-    "react/jsx-indent-props": [2, 2],
-    "react/jsx-key": 2,
-    "react/jsx-max-depth": [2, { "max": 5 }],
-    "react/jsx-no-comment-textnodes": 1,
-    "react/jsx-no-target-blank": 1,
-    "react/jsx-pascal-case": [1, { "allowAllCaps": true, "ignore": [] }],
-    "react/jsx-props-no-multi-spaces": 2,
-    "react/no-danger-with-children": 2,
-    "react/no-deprecated": 1,
-    "react/no-direct-mutation-state": 2,
-    "react/no-is-mounted": 1,
-    "react/no-multi-comp": [2, { "ignoreStateless": true }],
-    "react/no-redundant-should-component-update": 2,
-    "react/no-string-refs": 2,
-    "react/no-typos": 2,
-    "react/no-unescaped-entities": [2, {"forbid": [">", "\"", "'", "}"]}],
-    "react/no-unknown-property": 2,
-    "react/no-will-update-set-state": 2,
-    "react/react-in-jsx-scope": 2,
-    "react/require-render-return": 2,
-    "react/self-closing-comp": 2,
-    "react/sort-comp": [2, null],
-    "react/style-prop-object": 2,
-    "react/void-dom-elements-no-children": 2
+    "node/no-unsupported-features/node-builtins": 2
   },
 
   "overrides": [

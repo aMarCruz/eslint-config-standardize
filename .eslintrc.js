@@ -2,6 +2,6 @@ module.exports = {
   root: true,
 
   extends: [
-    './eslintrc.js',
+    './index.js',
   ],
 }

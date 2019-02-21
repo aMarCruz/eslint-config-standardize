@@ -15,8 +15,4 @@
 
   DO NOT USE plugin-prettier with this config.
 */
-const base = require('./lib/base.json')
-const conf = require('./lib/conf')
-const mergeConf = require('./lib/merge-conf')
-
-module.exports = mergeConf(base, conf)
+module.exports = require('./lib/get-conf')

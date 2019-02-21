@@ -5,6 +5,8 @@
 
 This is **WIP**
 
+See the [Changelog](CHANGELOG.md) for more info.
+
 ## Setup
 
 Install from npm (omit eslint if it's already installed or you are using CRA).
@@ -31,7 +33,7 @@ module.exports = {
 If you are using TypeScript add "standardize/typescript" in "extends".
 
 ```bash
-yarn add @@typescript-eslint/eslint-plugin
+yarn add @typescript-eslint/eslint-plugin -D
 ```
 
 ```js
@@ -55,40 +57,7 @@ module.exports = {
 - [standard](https://www.npmjs.com/package/eslint-plugin-standard)
 - [unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn)
 
-## Post-Setup
-
-If your App or some folder has NodeJS-only code, I recommend this this config:
-
-NodeJS code (ES6) in ./scripts
-
-```json
-{
-  "root": true,
-  "parserOptions": {
-    "ecmaVersion": 6
-  },
-  "extends": "standardize",
-  "overrides": [
-    {
-      "files": ["scripts/*.js"],
-      "rules": {
-        "import/no-nodejs-modules": "off",
-        "node/exports-style": ["error", "module.exports"],
-        "node/no-deprecated-api": "error",
-        "node/no-extraneous-import": "error",
-        "node/no-extraneous-require": "error",
-        "node/no-unpublished-bin": "error",
-        "node/no-unpublished-require": "error",
-        "node/no-unsupported-features/es-builtins": "error",
-        "node/no-unsupported-features/es-syntax": "error",
-        "node/no-unsupported-features/node-builtins": "off"
-      }
-    }
-  ]
-}
-```
-
-## Diferences vs StandardJS
+## Differences vs StandardJS
 
 Standardize uses a more strict and opinionated configuration than Standard, so almost all the code passes with no problems through the StandardJS linter, but has some differences with the default settings of StandardJS/Prettier.
 
@@ -138,43 +107,17 @@ cp ./node_modules/eslint-config-standardize/prettier/* prettier/
 yarn add prettierx -D && yarn add ./prettier
 ```
 
+**IMPORTANT:** A prettierx plugin for ESLint is in preparation that will solve several of the problems with the current implementations.
+
 ## Known Issues
 
 ### Ternary
 
 StandardJS define `flatTernaryExpressions: false` and that's ok, but Prettier formats these in a way that ESLint will not reformat.
 
-By example, Prettier will convert this code
+Good news: the prettierx `flatTernaryExpressions` rule will [solve this issue](https://github.com/brodybits/prettierx/pull/46) int its next version.
 
-```js
-const a = myLongCondition1
-  ? myLongLongLongValue1 : myLongCondition2
-  ? myLongLongLongValue1 : myLongCondition3
-```
-
-on this:
-
-```js
-const a = myLongCondition1
-  ? myLongLongLongValue1
-  : myLongCondition2
-  ? myLongLongLongValue1
-  : myLongCondition3
-```
-
-And ESLint will fix it like this:
-
-```js
-const a = myLongCondition1
-  ? myLongLongLongValue1
-  : myLongCondition2
-    ? myLongLongLongValue1
-    : myLongCondition3
-```
-
-ESLint will not join any line, and if you want use the `indent` rule with `flatTernaryExpressions: true`, you can't (see [eslint#11397](https://github.com/eslint/eslint/issues/11397)).
-
-### React Fragments
+### Comments
 
 Currently, the [prettier-eslint](https://www.npmjs.com/package/prettier-eslint) tool does not work with fragment shorthands. In addition, the setup of this tool includes a lot of (unnecessary) packages that make it heavy in extensions like [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) of VS Code.
 

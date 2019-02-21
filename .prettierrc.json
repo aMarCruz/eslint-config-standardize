@@ -14,10 +14,9 @@
   "requirePragma": false,
   "semi": false,
   "singleQuote": true,
-  "spaceAfterFunction": true,
   "spaceBeforeFunctionParen": true,
   "tabWidth": 2,
-  "trailingComma": "all",
+  "trailingComma": "es5",
   "useTabs": false,
   "yieldStarSpacing": false,
   "overrides": [
