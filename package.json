@@ -1,14 +1,18 @@
 {
   "name": "eslint-config-standardize",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "main": "./index.js",
   "author": "aMarCruz <amarcruzbox-git@yahoo.com>",
   "description": "Personal configuration based on standard, ready for JavaScript and TypeScript",
   "license": "MIT",
+  "bin": {
+    "list-eslint-config": "./bin/list-eslint-config.js"
+  },
   "files": [
     "index.js",
     ".prettier*",
     "lib",
+    "bin",
     "node-only",
     "prettier",
     "typescript"

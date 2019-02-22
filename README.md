@@ -3,7 +3,7 @@
 [![License][license-badge]][license-url]
 [![npm Version][npm-badge]][npm-url]
 
-This is **WIP**
+This is **WIP**, preparing for [eslint-plugin-prettierx](https://github.com/aMarCruz/eslint-plugin-prettierx).
 
 See the [Changelog](CHANGELOG.md) for more info.
 

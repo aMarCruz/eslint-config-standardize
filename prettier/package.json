@@ -8,7 +8,7 @@
     "prettier": "../prettierx/bin-prettierx.js"
   },
   "peerDependencies": {
-    "prettierx": ">=0.4.0"
+    "prettierx": ">=0.4.1"
   },
   "license": "MIT"
 }

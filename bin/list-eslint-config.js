@@ -1,25 +1,27 @@
+#!/usr/bin/env node
 /* eslint-disable import/no-nodejs-modules */
+
 const path = require('path')
 const eslint = require('eslint')
 
-const DEFAULT_EXTENSIONS = ['.js', '.jsx']
+const DEFAULT_EXTENSIONS = ['.js', '.jsx', '.mjs', '.ts', '.tsx']
 
 /**
- * Get the ESLint configuration
+ * Get the ESLint configuration.
+ * @param {string} filename
  */
-function getConfig (fileName) {
-  const filePath = path.resolve(fileName)
+function getConfig (filename) {
+  const filepath = path.resolve(filename)
 
   try {
     const cliEngine = new eslint.CLIEngine({
-      filePath,
       extensions: DEFAULT_EXTENSIONS,
     })
 
-    return cliEngine.getConfigForFile(filePath)
+    return cliEngine.getConfigForFile(filepath)
   } catch (error) {
     // is this noisy? Try setting options.disableLog to false
-    console.error(`Cannot get config for "${filePath}"\n${error.message}`)
+    console.error(`Cannot get config for "${filepath}"\n${error.message}`)
     process.exitCode = 1
   }
 

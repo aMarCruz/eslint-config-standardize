@@ -1,6 +1,6 @@
 {
   "alignTernaryLines": false,
-  "arrowParens": "always",
+  "arrowParens": "avoid",
   "bracketSpacing": true,
   "endOfLine": "lf",
   "generatorStarSpacing": true,

@@ -1,4 +1,4 @@
-const standardConf = require('eslint-config-standard/eslintrc.json')
+// const standardConf = require('eslint-config-standard/eslintrc.json')
 
 const OFF = 0
 const ON = 2
@@ -7,6 +7,12 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     warnOnUnsupportedTypeScriptVersion: false,
+  },
+
+  setings: {
+    standardize: {
+      ts: true,
+    },
   },
 
   plugins: ['@typescript-eslint'],
@@ -26,14 +32,14 @@ module.exports = {
     project://node_modules/@typescript-eslint/eslint-plugin/lib/configs/recommended.json
   */
   rules: {
-    'camelcase': OFF,
-    'indent': 0,
+    camelcase: OFF,
+    // indent: 0,
     '@typescript-eslint/adjacent-overload-signatures': ON,
     '@typescript-eslint/array-type': [ON, 'array-simple'],
     '@typescript-eslint/ban-types': ON,
     '@typescript-eslint/camelcase': [ON, { properties: 'always' }],
     '@typescript-eslint/class-name-casing': ON,
-    '@typescript-eslint/indent': standardConf.rules.indent,
+    // '@typescript-eslint/indent': standardConf.rules.indent,
     '@typescript-eslint/member-delimiter-style': [ON, { multiline: { delimiter: 'none' } }],
     '@typescript-eslint/member-naming': [ON, { private: '^_' }],
     '@typescript-eslint/no-angle-bracket-type-assertion': ON,
