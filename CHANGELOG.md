@@ -1,5 +1,15 @@
 # Changes for eslint-config-standardize
 
+## \[0.2.1] - 2019-02-22
+
+### Changed
+
+- Update Readme to include license link in the footer.
+
+### Fixed
+
+- Silly error in the typescript config.
+
 ## \[0.2.0] - 2019-02-22
 
 Preparation for [eslint-plugin-prettierx](https://github.com/aMarCruz/eslint-plugin-prettierx)

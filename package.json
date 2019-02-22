@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-standardize",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "./index.js",
   "author": "aMarCruz <amarcruzbox-git@yahoo.com>",
   "description": "Personal configuration based on standard, ready for JavaScript and TypeScript",

@@ -137,9 +137,11 @@ export default (
 )
 ```
 
-If you are usar 'Prettier - Code formatter', don't set the `prettier.eslintIntegration` option on React projects.
+If you are usar 'Prettier - Code formatter', don't set the `prettier.eslintIntegration` option on React projects, [eslint-plugin-prettierx](https://www.npmjs.com/package/eslint-plugin-prettierx) is WIP and will solve this and other issues.
 
-I'm working in an alternative.
+## License
+
+The [MIT](LICENSE) License &copy; 2019 Alberto Martínez
 
 [license-badge]:  https://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-url]:    https://github.com/aMarCruz/eslint-config-standardize/blob/master/LICENSE

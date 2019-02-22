@@ -9,12 +9,6 @@ module.exports = {
     warnOnUnsupportedTypeScriptVersion: false,
   },
 
-  setings: {
-    standardize: {
-      ts: true,
-    },
-  },
-
   plugins: ['@typescript-eslint'],
 
   settings: {
@@ -25,6 +19,9 @@ module.exports = {
     },
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.jsx', '.tsx', '.d.ts'],
+    },
+    standardize: {
+      ts: true,
     },
   },
 
