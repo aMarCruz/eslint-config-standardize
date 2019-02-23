@@ -1,7 +1,17 @@
-// const standardConf = require('eslint-config-standard/eslintrc.json')
-
 const OFF = 0
 const ON = 2
+
+const allExtensions = [
+  '.js',
+  '.jsx',
+  '.mjs',
+  '.android.js',
+  '.ios.js',
+  '.web.js',
+  '.ts',
+  '.tsx',
+  '.d.ts',
+]
 
 module.exports = {
   parser: '@typescript-eslint/parser',
@@ -12,16 +22,14 @@ module.exports = {
   plugins: ['@typescript-eslint'],
 
   settings: {
+    'import/extensions': allExtensions,
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
+        extensions: allExtensions,
       },
     },
     'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.jsx', '.tsx', '.d.ts'],
-    },
-    standardize: {
-      ts: true,
+      '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
     },
   },
 

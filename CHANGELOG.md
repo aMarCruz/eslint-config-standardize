@@ -1,5 +1,16 @@
 # Changes for eslint-config-standardize
 
+## \[0.2.2] - 2019-02-23
+
+### Changed
+
+- Disable 'unicorn/escape-case', 'unicorn/number-literal-case' because conflicts w/prettier.
+- Refactorization for better loading of the config.
+
+### Removed
+
+- Dependency on eslint-config-standard-jsx
+
 ## \[0.2.1] - 2019-02-22
 
 ### Changed

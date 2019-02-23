@@ -21,6 +21,6 @@ module.exports = {
     'node/no-unpublished-bin': ON,
     'node/no-unpublished-require': ON,
     'node/no-unsupported-features/node-builtins': OFF,
-    'node/shebang': 2,
+    'node/shebang': ON,
   },
 }

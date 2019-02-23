@@ -3,5 +3,6 @@ module.exports = {
 
   extends: [
     './index.js',
+    './typescript/index.js'
   ],
 }

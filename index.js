@@ -3,7 +3,6 @@
 
   StandardJS configs:
   project://node_modules/eslint-config-standard/eslintrc.json
-  project://node_modules/eslint-config-standard-jsx/eslintrc.json
 
   Plugins:
   project://node_modules/eslint-plugin-import/lib/index.js
@@ -13,6 +12,12 @@
   project://node_modules/eslint-plugin-react/index.js
   project://node_modules/eslint-plugin-unicorn/index.js
 
-  DO NOT USE plugin-prettier with this config.
+  You can use eslint-plugin-prettierx (note the 'x') with this config:
+
+  extends: [
+    'standardize',
+    'standardize/typescript',
+    'plugin:prettierx/standardize'
+  ]
 */
 module.exports = require('./lib/get-conf')

@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-standardize",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "./index.js",
   "author": "aMarCruz <amarcruzbox-git@yahoo.com>",
   "description": "Personal configuration based on standard, ready for JavaScript and TypeScript",
@@ -22,7 +22,8 @@
     "eslintplugin",
     "eslint-plugin",
     "javascript",
-    "typescript"
+    "typescript",
+    "config"
   ],
   "engines": {
     "node": ">=6.24"
@@ -37,7 +38,6 @@
     "@jsbits/deep-clone": "^1.1.1",
     "confusing-browser-globals": "*",
     "eslint-config-standard": "^12.0.0",
-    "eslint-config-standard-jsx": "^6.0.2",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-node": "^7.0.0",
     "eslint-plugin-promise": "^4.0.0",
