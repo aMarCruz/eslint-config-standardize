@@ -1,11 +1,9 @@
 # Changes for eslint-config-standardize
 
-## \[0.3.0] - 2019-02-25
+## \[0.3.1] - 2019-02-25
 
 ### Changed
 
-- Disable 'unicorn/escape-case', 'unicorn/number-literal-case' because conflicts w/prettier.
-- Refactorization for better loading of the config.
 - Split the react rules to a separate file.
 - Severity of "react/jsx-no-comment-textnodes" from "warn" to "error"
 - Uses "@typescript-eslint/indent" if available.
@@ -13,6 +11,15 @@
 ### Added
 
 - Instructions for use with eslint-plugin-prettierx
+
+## \[0.3.0] - 2019-02-23
+
+_**not pusblished in npm**_
+
+### Changed
+
+- Disable 'unicorn/escape-case', 'unicorn/number-literal-case' because conflicts w/prettier.
+- Refactorization for better loading of the config.
 
 ### Removed
 
