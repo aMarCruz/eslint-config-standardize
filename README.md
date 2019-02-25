@@ -24,7 +24,7 @@ In your ESLint config file:
 ```js
 // .eslintrc.js
 module.exports = {
-  root: true,    // optional, stop searching upwards
+  root: true,    // optional, avoids searching upwards
   plugins: [
     'standardize',
   ],
@@ -40,10 +40,12 @@ If you are using TypeScript add "standardize/typescript" in "extends".
 yarn add @typescript-eslint/eslint-plugin -D
 ```
 
+Configure eslint
+
 ```js
 // .eslintrc.js
 module.exports = {
-  root: true,    // optional, stop searching upwards
+  root: true,    // optional, avoids searching upwards
   plugins: [
     'standardize',
   ],
