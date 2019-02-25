@@ -1,3 +1,5 @@
+const standardConf = require('eslint-config-standard')
+
 const OFF = 0
 const ON = 2
 
@@ -38,13 +40,13 @@ module.exports = {
   */
   rules: {
     camelcase: OFF,
-    // indent: 0,
+    indent: 0,
     '@typescript-eslint/adjacent-overload-signatures': ON,
     '@typescript-eslint/array-type': [ON, 'array-simple'],
     '@typescript-eslint/ban-types': ON,
     '@typescript-eslint/camelcase': [ON, { properties: 'always' }],
     '@typescript-eslint/class-name-casing': ON,
-    // '@typescript-eslint/indent': standardConf.rules.indent,
+    '@typescript-eslint/indent': standardConf.rules.indent,
     '@typescript-eslint/member-delimiter-style': [ON, { multiline: { delimiter: 'none' } }],
     '@typescript-eslint/member-naming': [ON, { private: '^_' }],
     '@typescript-eslint/no-angle-bracket-type-assertion': ON,

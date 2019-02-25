@@ -3,7 +3,9 @@
 [![License][license-badge]][license-url]
 [![npm Version][npm-badge]][npm-url]
 
-This is **WIP**, preparing for [eslint-plugin-prettierx](https://github.com/aMarCruz/eslint-plugin-prettierx).
+This is **WIP**
+
+For use with ESLint 5.12 or above
 
 See the [Changelog](CHANGELOG.md) for more info.
 
@@ -22,11 +24,13 @@ In your ESLint config file:
 ```js
 // .eslintrc.js
 module.exports = {
-  // ...
+  root: true,    // optional, stop searching upwards
+  plugins: [
+    'standardize',
+  ],
   extends: [
     'standardize',
   ],
-  // ...
 }
 ```
 
@@ -39,12 +43,14 @@ yarn add @typescript-eslint/eslint-plugin -D
 ```js
 // .eslintrc.js
 module.exports = {
-  // ...
+  root: true,    // optional, stop searching upwards
+  plugins: [
+    'standardize',
+  ],
   extends: [
     'standardize',
     'standardize/typescript'
   ],
-  // ...
 }
 ```
 
@@ -107,7 +113,32 @@ cp ./node_modules/eslint-config-standardize/prettier/* prettier/
 yarn add prettierx -D && yarn add ./prettier
 ```
 
-**IMPORTANT:** A prettierx plugin for ESLint is in preparation that will solve several of the problems with the current implementations.
+### eslint-plugin-prettierx
+
+The [eslint-plugin-prettierx](https://github.com/aMarCruz/eslint-plugin-prettierx) can be used to format JS code. It have a preset for the standardize bundle.
+
+This example is using standardize with the prettierx plugin:
+
+```bash
+# install requirements
+yarn add eslint eslint-plugin-prettierx eslint-install-standardize
+```
+
+Configure eslint:
+
+```js
+// .eslintrc.js
+module.exports = {
+  plugins: [
+    'prettierx'
+  ]
+  extends: [
+    'plugin:prettierx/standardize-bundle',
+  ],
+}
+```
+
+Done.
 
 ## Known Issues
 
