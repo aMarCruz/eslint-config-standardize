@@ -117,6 +117,11 @@ yarn add prettierx -D && yarn add ./prettier
 
 ### eslint-plugin-prettierx
 
+| WARNING |
+| --- |
+| From v0.3.2 you must set the 'standardize' config in "extends" manually |
+
+
 The [eslint-plugin-prettierx](https://github.com/aMarCruz/eslint-plugin-prettierx) can be used to format JS code. It have a preset for the standardize bundle.
 
 This example is using standardize with the prettierx plugin:
@@ -135,6 +140,7 @@ module.exports = {
     'prettierx'
   ]
   extends: [
+    'standardize',
     'plugin:prettierx/standardize-bundle',
   ],
 }
