@@ -24,13 +24,9 @@ In your ESLint config file:
 ```js
 // .eslintrc.js
 module.exports = {
-  root: true,    // optional, avoids searching upwards
-  plugins: [
-    'standardize',
-  ],
-  extends: [
-    'standardize',
-  ],
+  root: true, // optional, avoids searching upwards
+  plugins: ['standardize'],
+  extends: ['standardize'],
 }
 ```
 
@@ -45,14 +41,9 @@ Configure eslint
 ```js
 // .eslintrc.js
 module.exports = {
-  root: true,    // optional, avoids searching upwards
-  plugins: [
-    'standardize',
-  ],
-  extends: [
-    'standardize',
-    'standardize/typescript'
-  ],
+  root: true, // optional, avoids searching upwards
+  plugins: ['standardize'],
+  extends: ['standardize', 'standardize/typescript'],
 }
 ```
 
@@ -117,10 +108,9 @@ yarn add prettierx -D && yarn add ./prettier
 
 ### eslint-plugin-prettierx
 
-| WARNING |
-| --- |
+| WARNING                                                                 |
+| ----------------------------------------------------------------------- |
 | From v0.3.2 you must set the 'standardize' config in "extends" manually |
-
 
 The [eslint-plugin-prettierx](https://github.com/aMarCruz/eslint-plugin-prettierx) can be used to format JS code. It have a preset for the standardize bundle.
 
@@ -158,12 +148,16 @@ Good news: the prettierx `flatTernaryExpressions` rule will [solve this issue](h
 
 ### Comments
 
-Currently, the [prettier-eslint](https://www.npmjs.com/package/prettier-eslint) tool does not work with fragment shorthands. In addition, the setup of this tool includes a lot of (unnecessary) packages that make it heavy in extensions like [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) of VS Code.
+Currently, the [prettier-eslint](https://www.npmjs.com/package/prettier-eslint) tool does not work with fragment shorthands.
 
-This is the bug:
+Original code:
 
 ```jsx
-export default <><div>foo</div></>
+export default (
+  <>
+    <div>foo</div>
+  </>
+)
 ```
 
 after prettier-eslint:
@@ -176,13 +170,13 @@ export default (
 )
 ```
 
-If you are usar 'Prettier - Code formatter', don't set the `prettier.eslintIntegration` option on React projects, [eslint-plugin-prettierx](https://www.npmjs.com/package/eslint-plugin-prettierx) is WIP and will solve this and other issues.
+If you are usar 'Prettier - Code formatter', don't set the `prettier.eslintIntegration` option on React projects, [eslint-plugin-prettierx](https://www.npmjs.com/package/eslint-plugin-prettierx) solves this issue.
 
 ## License
 
 The [MIT](LICENSE) License &copy; 2019 Alberto Martínez
 
-[license-badge]:  https://img.shields.io/badge/license-MIT-blue.svg?style=flat
-[license-url]:    https://github.com/aMarCruz/eslint-config-standardize/blob/master/LICENSE
-[npm-badge]:      https://img.shields.io/npm/v/eslint-config-standardize.svg
-[npm-url]:        https://www.npmjs.com/package/eslint-config-standardize
+[license-badge]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
+[license-url]: https://github.com/aMarCruz/eslint-config-standardize/blob/master/LICENSE
+[npm-badge]: https://img.shields.io/npm/v/eslint-config-standardize.svg
+[npm-url]: https://www.npmjs.com/package/eslint-config-standardize

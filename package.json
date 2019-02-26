@@ -3,7 +3,7 @@
   "version": "0.3.2",
   "main": "./index.js",
   "author": "aMarCruz <amarcruzbox-git@yahoo.com>",
-  "description": "Personal configuration based on standard, ready for JavaScript and TypeScript",
+  "description": "My personal configuration based on StandardJS, ready for JavaScript and TypeScript",
   "license": "MIT",
   "bin": {
     "list-eslint-config": "./bin/list-eslint-config.js"
@@ -23,7 +23,9 @@
     "eslint-plugin",
     "javascript",
     "typescript",
-    "config"
+    "config",
+    "preset",
+    "lint"
   ],
   "engines": {
     "node": ">=6.24"
