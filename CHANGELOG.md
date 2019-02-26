@@ -1,6 +1,10 @@
 # Changes for eslint-config-standardize
 
-## \[0.3.2] - Unreleased
+## \[0.3.2] - 2019-02-26
+
+### Changed
+
+- Update Readme to include note about change in the "standardize-bundle" preset of prettierx.
 
 ### Fixed
 
