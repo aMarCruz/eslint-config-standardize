@@ -88,11 +88,9 @@ ESLint rule: [`spaced-comment`](https://eslint.org/docs/rules/spaced-comment)
 
 ### Quote Props
 
-Both Prettier and StandardJS enclose the properties in quotes "as needed", this looks ugly with syntax highlighting on large JS objects (such as those used in configurations) and is inconsistent at object level.
+~~Both Prettier and StandardJS enclose the properties in quotes "as needed", this looks ugly with syntax highlighting on large JS objects (such as those used in configurations) and is inconsistent at object level.~~
 
-Standardize uses `quote-props: consistent-as-needed`.
-
-ESLint rule: [`quote-props`](https://eslint.org/docs/rules/quote-props)
+Disabled rule, eslint `quote-props` conflicts with the prettierx integration.
 
 ## Prettier
 
