@@ -1,5 +1,12 @@
 # Changes for eslint-config-standardize
 
+## \[0.3.2] - Unreleased
+
+### Fixed
+
+- typescript does not follows the StandardJS `camelcase` rule.
+- typescript conflict with `import/export` and types.
+
 ## \[0.3.1] - 2019-02-25
 
 ### Changed

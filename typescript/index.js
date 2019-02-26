@@ -40,11 +40,11 @@ module.exports = {
   */
   rules: {
     camelcase: OFF,
-    indent: 0,
+    indent: OFF,
     '@typescript-eslint/adjacent-overload-signatures': ON,
     '@typescript-eslint/array-type': [ON, 'array-simple'],
     '@typescript-eslint/ban-types': ON,
-    '@typescript-eslint/camelcase': [ON, { properties: 'always' }],
+    '@typescript-eslint/camelcase': standardConf.rules.camelcase,
     '@typescript-eslint/class-name-casing': ON,
     '@typescript-eslint/indent': standardConf.rules.indent,
     '@typescript-eslint/member-delimiter-style': [ON, { multiline: { delimiter: 'none' } }],
@@ -65,6 +65,7 @@ module.exports = {
       rules: {
         'no-redeclare': OFF, // avoid conflicts when exporting function+namespace
         'import/named': OFF,
+        'import/export': OFF,
         'import/no-named-as-default': OFF,
         'no-array-constructor': OFF,
         'no-dupe-class-members': OFF, // to allow Ctor overloads
