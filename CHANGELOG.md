@@ -5,6 +5,7 @@
 ### Changed
 
 - Update Readme and package description.
+- Enable '@typescript-eslint/no-use-before-define', the bug seems solved.
 
 ## \[0.3.2] - 2019-02-26
 
