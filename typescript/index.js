@@ -72,7 +72,7 @@ module.exports = {
         'no-undef': OFF, // handled by TS
         'no-unused-vars': OFF, // handled by TS `noUnusedLocals`
         'no-use-before-define': OFF,
-        '@typescript-eslint/no-use-before-define': [ON, { functions: false, typedefs: false }],
+        '@typescript-eslint/no-use-before-define': OFF, // [ON, { functions: false, typedefs: false }],
         '@typescript-eslint/no-array-constructor': ON,
         '@typescript-eslint/no-var-requires': ON,
       },

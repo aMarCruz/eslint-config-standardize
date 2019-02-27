@@ -1,5 +1,11 @@
 # Changes for eslint-config-standardize
 
+## \[0.3.4] - 2019-02-27
+
+## Changed
+
+- Revert '@typescript-eslint/no-use-before-define' because issues with `typeof`
+
 ## \[0.3.3] - 2019-02-27
 
 ### Changed
