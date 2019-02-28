@@ -1,6 +1,6 @@
 # Changes for eslint-config-standardize
 
-## \[0.3.5] - Unreleased
+## \[0.3.5] - 2019-02-27
 
 ### Added
 
