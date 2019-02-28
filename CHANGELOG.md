@@ -2,9 +2,15 @@
 
 ## \[0.3.5] - Unreleased
 
+### Added
+
+- Error for 'callback-return', 'no-buffer-constructor', 'no-misleading-character-class'
+- Warning for 'complexity' with level 8
+- Warning for 'max-depth' and 'no-case-declarations'
+
 ### Changed
 
-- Add "commonjs" flag to `import/no-unresolved`
+- Set the commonjs flag to `import/no-unresolved`
 
 ## \[0.3.4] - 2019-02-27
 
