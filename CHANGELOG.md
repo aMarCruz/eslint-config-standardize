@@ -1,5 +1,11 @@
 # Changes for eslint-config-standardize
 
+## \[0.3.5] - Unreleased
+
+### Changed
+
+- Add "commonjs" flag to `import/no-unresolved`
+
 ## \[0.3.4] - 2019-02-27
 
 ## Changed
