@@ -11,6 +11,7 @@
 ### Changed
 
 - Set the commonjs flag to `import/no-unresolved`
+- Update devDependencies, including Prettierx v0.6
 
 ## \[0.3.4] - 2019-02-27
 

@@ -94,14 +94,14 @@ Disabled rule, eslint `quote-props` conflicts with the prettierx integration.
 
 ## Prettier
 
-If you like PrettierX but you are using some tool that requires Prettier, in the ./node_modules/eslint-config-standardize/prettier you will find a package that will redirect `require`s for Prettier to PrietterX. You can copy this folder to the root of your App or install from there.
+If you like PrettierX but you are using some tool that requires Prettier, in the ./node_modules/eslint-config-standardize/prettier you will find a package that will redirect `require`s for Prettier to PrettierX. You can copy this folder to the root of your App or install from there.
 
-Install prettierx then the fake prettier:
+Copy the fake package from node_modules, install prettierx then the fake prettier:
 
 ```sh
-mkdir prettier
-cp ./node_modules/eslint-config-standardize/prettier/* prettier/
-yarn add prettierx -D && yarn add ./prettier
+mkdir .prettier
+cp ./node_modules/eslint-config-standardize/prettier/* .prettier/
+yarn add prettierx -D && yarn add ./prettier -D
 ```
 
 ### eslint-plugin-prettierx
