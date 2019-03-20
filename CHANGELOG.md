@@ -1,5 +1,20 @@
 # Changes for eslint-config-standardize
 
+## \[0.3.6] - 2019-03-20
+
+### Added
+
+- 'react/no-access-state-in-setstate'
+
+### Changed
+
+- Update dependencies
+
+### Removed
+
+- 'promise/always-return', the 'promise/catch-or-return' rule is enough.
+- 'import/no-duplicates', eslint 'no-duplicate-imports' is already enabled.
+
 ## \[0.3.5] - 2019-02-27
 
 ### Added
