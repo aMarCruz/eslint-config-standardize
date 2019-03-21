@@ -136,39 +136,7 @@ module.exports = {
 
 Done.
 
-## Known Issues
-
-### Ternary
-
-StandardJS define `flatTernaryExpressions: false` and that's ok, but Prettier formats these in a way that ESLint will not reformat.
-
-Good news: the prettierx `flatTernaryExpressions` rule will [solve this issue](https://github.com/brodybits/prettierx/pull/46) int its next version.
-
-### Comments
-
-Currently, the [prettier-eslint](https://www.npmjs.com/package/prettier-eslint) tool does not work with fragment shorthands.
-
-Original code:
-
-```jsx
-export default (
-  <>
-    <div>foo</div>
-  </>
-)
-```
-
-after prettier-eslint:
-
-```jsx
-export default (
-  <>
-    ' '<div>foo</div>' '
-  </>
-)
-```
-
-If you are using 'Prettier - Code formatter', don't set the `prettier.eslintIntegration` option on React projects, [eslint-plugin-prettierx](https://www.npmjs.com/package/eslint-plugin-prettierx) solves this issue.
+This plugin is a excellent alternative to the VS Code 'Prettier - Code formatter' extension. See [here](https://github.com/aMarCruz/eslint-plugin-prettierx#vs-code-eslint) to know how to configure it.
 
 ## License
 
