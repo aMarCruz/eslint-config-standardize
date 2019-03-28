@@ -25,10 +25,11 @@ In your ESLint config file:
 // .eslintrc.js
 module.exports = {
   root: true, // optional, avoids searching upwards
-  plugins: ['standardize'],
   extends: ['standardize'],
 }
 ```
+
+### With TypeScript
 
 If you are using TypeScript add "standardize/typescript" in "extends".
 
@@ -42,7 +43,6 @@ Configure eslint
 // .eslintrc.js
 module.exports = {
   root: true, // optional, avoids searching upwards
-  plugins: ['standardize'],
   extends: ['standardize', 'standardize/typescript'],
 }
 ```
@@ -138,6 +138,16 @@ Done.
 
 This plugin is a excellent alternative to the VS Code 'Prettier - Code formatter' extension. See [here](https://github.com/aMarCruz/eslint-plugin-prettierx#vs-code-eslint) to know how to configure it.
 
+## Support my Work
+
+I'm a full-stack developer with more than 20 year of experience and I try to share most of my work for free and help others, but this takes a significant amount of time and effort so, if you like my work, please consider...
+
+[<img src="https://amarcruz.github.io/images/kofi_blue.png" height="36" title="Support Me on Ko-fi" />][kofi-url]
+
+Of course, feedback, PRs, and stars are also welcome 🙃
+
+Thanks for your support!
+
 ## License
 
 The [MIT](LICENSE) License &copy; 2019 Alberto Martínez
@@ -146,3 +156,4 @@ The [MIT](LICENSE) License &copy; 2019 Alberto Martínez
 [license-url]: https://github.com/aMarCruz/eslint-config-standardize/blob/master/LICENSE
 [npm-badge]: https://img.shields.io/npm/v/eslint-config-standardize.svg
 [npm-url]: https://www.npmjs.com/package/eslint-config-standardize
+[kofi-url]:       https://ko-fi.com/C0C7LF7I

@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-standardize",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "main": "./index.js",
   "author": "aMarCruz <amarcruzbox-git@yahoo.com>",
   "description": "My personal configuration based on StandardJS, ready for JavaScript and TypeScript",
@@ -45,7 +45,7 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-unicorn": "^7.1.0"
+    "eslint-plugin-unicorn": "^8.0.0"
   },
   "devDependencies": {
     "@types/node": "^11.9.4",

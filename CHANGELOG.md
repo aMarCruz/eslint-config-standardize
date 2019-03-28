@@ -1,5 +1,20 @@
 # Changes for eslint-config-standardize
 
+## \[0.3.7] - 2019-03-27
+
+### Added
+
+- 'unicorn/prefer-includes' rule.
+
+### Changed
+
+- Updated unicorn to v8.0
+- Remove the message displayed when config React version.
+
+### Fixed
+
+- Error in Readme showing standardize in .eslintrc as a plugin.
+
 ## \[0.3.6] - 2019-03-20
 
 ### Added
