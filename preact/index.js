@@ -9,10 +9,6 @@ module.exports = {
       pragma: 'h',
     },
   },
-
-  /*
-    project://node_modules/@typescript-eslint/eslint-plugin/lib/configs/recommended.json
-  */
   rules: {
     'react/no-unknown-property': [ON, { ignore: ['class', 'for'] }],
   },
