@@ -1,12 +1,16 @@
 # Changes for eslint-config-standardize
 
-## \[0.4.0] - 2019-10-30
+## \[0.4.1] - 2019-10-30
+
+This is to replace v0.4.0, which did not include the 'preact' configuration folder.
+
+## \[0.4.0] - Unreleased
 
 Major update of dependencies.
 
 ### Added
 
-- 'standardize/prect configuration' for ESLint extends.
+- 'standardize/preact' configuration for he ESLint `extends` array.
 - `'#__PURE__'` (uglifyJS/terser directive) to `block` property in 'spaced-comment'
 - `@typescript-eslint/consistent-type-assertions` replacing obsolete rules (see "Removed").
 - `react/no-did-mount-set-state` as warn.
@@ -21,6 +25,8 @@ Major update of dependencies.
 
 ### Changed
 
+- Using Prettierx v0.8.0, based on Prettier 1.18.0
+- Updated the './prettier' directory for sync dependencies.
 - `@typescript/array-type` now is 'array', to allow the `readonly` keyword.
 - `arrow-parens` now is 'as-needed' with `requireForBlockBody` false.
 - `complexity` from 8 to 10.

@@ -11,6 +11,8 @@ Minimum NodeJS version supported: NodeJS 8 - deprecated; NodeJS 10 is recommende
 
 In v0.4 there are breaking changes, please see the [Changelog](CHANGELOG.md) for more info.
 
+If you are using the [(fake) Prettier](#prettier) package, please update it.
+
 ## Setup
 
 Install from npm (omit eslint if it's already installed or you are using CRA).
