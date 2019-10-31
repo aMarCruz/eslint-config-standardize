@@ -1,9 +1,6 @@
 {
   "root": true,
-  "extends": [
-    "./eslint.json",
-    "../typescript/index.js"
-  ],
+  "extends": ["./eslint.json", "../typescript/index.js"],
   "overrides": [
     {
       "files": ["*.tsx"],

@@ -1,4 +1,5 @@
 {
+  "eslint.autoFixOnSave": true,
   "eslint.packageManager": "yarn",
   "eslint.validate": [
     "javascript",
@@ -12,18 +13,12 @@
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.tsdk": "node_modules/typescript/lib",
   "javascript.validate.enable": false,
-  "prettier.eslintIntegration": false,
-  "[javascript]": {
-    "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
+  "[markdown]": {
+    "editor.formatOnSave": true
   },
-  "[typescript]": {
-    "editor.formatOnSave": false,
-  },
-  "[typescriptreact]": {
-    "editor.formatOnSave": false,
-  },
-  "[css]": {
-    "editor.formatOnSave": false,
+  "[json]": {
+    "editor.formatOnSave": true
   },
   "files.exclude": {
     "**/node_modules": false

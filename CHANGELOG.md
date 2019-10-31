@@ -1,5 +1,13 @@
 # Changes for eslint-config-standardize
 
+## \[0.4.2] - 2019-11-01
+
+### Changed
+
+- Fix an errors bin/list-eslint-config.js
+- Minimum ESLint v6.0.1 in peerDependencies because there's bugs in 6.0.0
+- Reformat code using Prettierx and the VS Code plugin.
+
 ## \[0.4.1] - 2019-10-30
 
 This is to replace v0.4.0, which did not include the 'preact' configuration folder.
