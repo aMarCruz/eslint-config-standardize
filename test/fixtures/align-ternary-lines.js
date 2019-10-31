@@ -1,8 +1,9 @@
-/* eslint-disable no-unused-vars, indent: [2, 2, { flatTernaryExpressions: false }] */
+/* eslint-disable no-unused-vars */
+/* eslint indent:[2,2,{flatTernaryExpressions:false}] */
 /* eslint-env es6 */
 const abababababab = ['', '', '', '']
 
-const abcvar = abababababab[0] === 'foobarfoobarfoobarfoobar1'
+const abcvar1 = abababababab[0] === 'foobarfoobarfoobarfoobar1'
   ? abababababab[0]
   : abababababab[1] === 'foobarfoobarfoobarfoobar1'
     ? abababababab[1]
@@ -17,7 +18,7 @@ const abcvar = abababababab[0] === 'foobarfoobarfoobarfoobar1'
 /* eslint-disable */
 
 // Prettier with alignTernaryLines: false
-const abcvar =
+const abcvar2 =
   abababababab[0] === 'foobarfoobarfoobarfoobar1'
     ? abababababab[0]
     : abababababab[1] === 'foobarfoobarfoobarfoobar1'

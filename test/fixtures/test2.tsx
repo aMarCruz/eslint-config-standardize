@@ -7,7 +7,7 @@
 */
 import * as React from 'react';
 
-type Props = { foo: typeof Foo }
+type Props = { foo: typeof Foo; bar: readonly string[][] }
 type Dict = { [k: string]: React.Ref<any> }
 
 class Test1 extends React.Component<Props> {

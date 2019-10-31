@@ -30,11 +30,31 @@ function getConfig (filename) {
 
 const args = process.argv.slice(2)
 
+const popOption = opt => {
+  const idx = opt.indexOf(opt)
+  return ~~idx ? args.splice(idx, 1)[0] : false
+}
+
 if (!args.length || args.includes('-h') || args.includes('--help')) {
   console.log(`
-  Usage: ${path.relative('.', __filename)} js-file-path
+  Usage: ${path.relative('.', __filename)} [options] js-filename
+
+  List the ESLint settings used with 'js-filename'.
+
+  Note: 'js-filename' can be absolute or relative to the current folder.
+
+  options:
+    -J, --json   Ourput as .json (forces '-no-color', default is 'console.dir')
+    --no-color   Output with no colors
   `)
 } else {
+  const nocolor = popOption('--no-color')
+  const asJson = popOption('-J') || popOption('--json')
   const config = getConfig(args[0])
-  console.log(JSON.stringify(config, null, 2))
+
+  if (asJson) {
+    console.log(JSON.stringify(config, null, 2))
+  } else {
+    console.dir(config, { colors: !nocolor, depth: 8 })
+  }
 }

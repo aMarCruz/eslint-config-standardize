@@ -3,20 +3,22 @@
 [![License][license-badge]][license-url]
 [![npm Version][npm-badge]][npm-url]
 
-This is **WIP**
+For use with ESLint v6.x, for ESLint v5.x use eslint-config-standardize 0.3.x
 
-For use with ESLint 5.12 or above
+Minimum NodeJS version supported: NodeJS 8 - deprecated; NodeJS 10 is recommended as described in [brodybits/prettierx#6](https://github.com/brodybits/prettierx/issues/6)
 
-See the [Changelog](CHANGELOG.md) for more info.
+## Note
+
+In v0.4 there are breaking changes, please see the [Changelog](CHANGELOG.md) for more info.
 
 ## Setup
 
 Install from npm (omit eslint if it's already installed or you are using CRA).
 
 ```sh
-npm i eslint eslint-config-standardize -D
+npm i eslint@6.x eslint-config-standardize -D
 # or
-yarn add eslint eslint-config-standardize -D
+yarn add eslint@6.x eslint-config-standardize -D
 ```
 
 In your ESLint config file:
@@ -34,10 +36,10 @@ module.exports = {
 If you are using TypeScript add "standardize/typescript" in "extends".
 
 ```bash
-yarn add @typescript-eslint/eslint-plugin -D
+yarn add @typescript-eslint/parser @typescript-eslint/eslint-plugin -D
 ```
 
-Configure eslint
+In your eslint config
 
 ```js
 // .eslintrc.js
@@ -46,6 +48,22 @@ module.exports = {
   extends: ['standardize', 'standardize/typescript'],
 }
 ```
+
+### With Preact
+
+In your eslint config
+
+```js
+// .eslintrc.js
+module.exports = {
+  root: true, // optional, avoids searching upwards
+  extends: ['standardize', 'standardize/preact'],
+}
+```
+
+#### Note
+
+You can mix the "standardize/preact" with "standardize/typescript" configs.
 
 ## Included Plugins
 
@@ -83,25 +101,30 @@ Prettier: [`jsxSingleQuote`](https://prettier.io/docs/en/options.html#jsx-quotes
 ### Spaced comment
 
 Adds `#`, `#region`, `#endregion` (VS Code directives) to the line markers.
+Adds `#__PURE__` (uglify/terser directive) to the block markers.
 
 ESLint rule: [`spaced-comment`](https://eslint.org/docs/rules/spaced-comment)
+Prettier: N/A
 
 ### Quote Props
 
-~~Both Prettier and StandardJS enclose the properties in quotes "as needed", this looks ugly with syntax highlighting on large JS objects (such as those used in configurations) and is inconsistent at object level.~~
+Both Prettier and StandardJS enclose the properties in quotes "as needed", this looks ugly with syntax highlighting on large JS objects (such as those used in configurations) and is inconsistent at object level. I prefer `"consistent"`.
 
-Disabled rule, eslint `quote-props` conflicts with the prettierx integration.
+ESLint rule: [`quote-props`](https://eslint.org/docs/rules/quote-props)
+Prettier: [`quoteProps`](https://prettier.io/docs/en/options.html#quote-props)
 
 ## Prettier
 
 If you like PrettierX but you are using some tool that requires Prettier, in the ./node_modules/eslint-config-standardize/prettier you will find a package that will redirect `require`s for Prettier to PrettierX. You can copy this folder to the root of your App or install from there.
 
-Copy the fake package from node_modules, install prettierx then the fake prettier:
+Copy the fake package from node_modules, install prettierx then the local prettier:
+
+In linux/mac run this commands:
 
 ```sh
 mkdir .prettier
 cp ./node_modules/eslint-config-standardize/prettier/* .prettier/
-yarn add prettierx -D && yarn add ./prettier -D
+yarn add prettierx file:.prettier -D
 ```
 
 ### eslint-plugin-prettierx
@@ -156,4 +179,4 @@ The [MIT](LICENSE) License &copy; 2019 Alberto Martínez
 [license-url]: https://github.com/aMarCruz/eslint-config-standardize/blob/master/LICENSE
 [npm-badge]: https://img.shields.io/npm/v/eslint-config-standardize.svg
 [npm-url]: https://www.npmjs.com/package/eslint-config-standardize
-[kofi-url]:       https://ko-fi.com/C0C7LF7I
+[kofi-url]: https://ko-fi.com/C0C7LF7I

@@ -1,5 +1,39 @@
 # Changes for eslint-config-standardize
 
+## \[0.4.0] - 2019-10-30
+
+Major update of dependencies.
+
+### Added
+
+- 'standardize/prect configuration' for ESLint extends.
+- `'#__PURE__'` (uglifyJS/terser directive) to `block` property in 'spaced-comment'
+- `@typescript-eslint/consistent-type-assertions` replacing obsolete rules (see "Removed").
+- `react/no-did-mount-set-state` as warn.
+- `react/no-did-update-set-state` as error.
+- `unicorn/no-console-spaces` as warn.
+- `unicorn/prefer-dataset` as warn.
+- `unicorn/prefer-event-key` as error.
+- `unicorn/prefer-node-remove` as warn.
+- `unicorn/prefer-starts-ends-with` as warn.
+- `unicorn/prefer-text-content` as error.
+- `unicorn/throw-new-error` as error.
+
+### Changed
+
+- `@typescript/array-type` now is 'array', to allow the `readonly` keyword.
+- `arrow-parens` now is 'as-needed' with `requireForBlockBody` false.
+- `complexity` from 8 to 10.
+- `default-case` now accept 'nodefault' or 'no default'.
+- `quote-props` from 'as-needed' to 'consistent'.
+- `unicorn/no-unused-properties` from error to warn.
+- `unicorn/prefer-add-event-listener` from error to warn.
+
+### Removed
+
+- `@typescript-eslint/no-angle-bracket-type-assertion`
+- `callback-return`, there's many _false negative/positive_ fails.
+
 ## \[0.3.7] - 2019-03-27
 
 ### Added

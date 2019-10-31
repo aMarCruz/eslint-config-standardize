@@ -10,6 +10,31 @@
     "es6": true,
     "node": true
   },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".mjs",
+          ".web.js",
+          ".ios.js",
+          ".android.js",
+          ".jsx"
+        ]
+      }
+    },
+    "react": {
+      "version": "16.11.0"
+    },
+    "import/extensions": [
+      ".js",
+      ".mjs",
+      ".web.js",
+      ".ios.js",
+      ".android.js",
+      ".jsx"
+    ]
+  },
   "plugins": [
     "import",
     "node",
@@ -19,25 +44,33 @@
     "react"
   ],
   "extends": [
-    "standard",
-    "standard-jsx"
+    "standard"
   ],
   "rules": {
     "comma-dangle": [
       2,
-      "always-multiline",
       {
-        "arrays": "always",
-        "objects": "always",
-        "imports": "always",
-        "exports": "always",
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
         "functions": "never"
+      }
+    ],
+    "complexity": [
+      1,
+      {
+        "max": 10
       }
     ],
     "jsx-quotes": [
       2,
       "prefer-double"
     ],
+    "max-depth": 1,
+    "no-case-declarations": 1,
+    "no-buffer-constructor": 2,
+    "no-misleading-character-class": 2,
     "spaced-comment": [
       2,
       "always",
@@ -52,7 +85,8 @@
             ",",
             ":",
             "::",
-            "flow-include"
+            "flow-include",
+            "#__PURE__"
           ],
           "balanced": true
         },
@@ -78,15 +112,17 @@
       2,
       "inside"
     ],
-    "quote-props": [
+    "arrow-parens": [
       2,
-      "consistent-as-needed"
+      "as-needed",
+      {
+        "requireForBlockBody": false
+      }
     ],
-    "arrow-parens": 2,
     "default-case": [
       1,
       {
-        "commentPattern": "^no default$"
+        "commentPattern": "^no {0,1}default$"
       }
     ],
     "max-len": [
@@ -106,7 +142,7 @@
     "no-confusing-arrow": [
       2,
       {
-        "allowParens": true
+        "allowParens": false
       }
     ],
     "no-div-regex": 2,
@@ -209,17 +245,11 @@
     "require-await": 2,
     "require-yield": 2,
     "sort-imports": [
-      2,
+      1,
       {
         "ignoreCase": true,
         "ignoreDeclarationSort": true,
-        "ignoreMemberSort": false,
-        "memberSyntaxSortOrder": [
-          "all",
-          "single",
-          "multiple",
-          "none"
-        ]
+        "ignoreMemberSort": false
       }
     ],
     "switch-colon-spacing": [
@@ -228,24 +258,24 @@
         "after": true
       }
     ],
-    "strict": [
-      2,
-      "never"
-    ],
     "linebreak-style": [
       2,
       "unix"
     ],
-    "prefer-arrow-callback": 0,
     "arrow-body-style": [
       2,
       "as-needed"
     ],
+    "prefer-arrow-callback": 0,
+    "quote-props": [
+      2,
+      "consistent"
+    ],
     "no-useless-constructor": 0,
-    "promise/always-return": 2,
     "promise/catch-or-return": [
       2,
       {
+        "allowThen": true,
         "terminationMethod": [
           "catch",
           "finally"
@@ -264,6 +294,8 @@
     ],
     "promise/valid-params": 2,
     "import/default": 2,
+    "import/export": 2,
+    "import/first": 2,
     "import/named": 2,
     "import/namespace": 2,
     "import/no-absolute-path": 2,
@@ -278,9 +310,16 @@
     "import/no-mutable-exports": 2,
     "import/no-named-as-default-member": 2,
     "import/no-named-as-default": 2,
+    "import/no-named-default": 2,
     "import/no-self-import": 2,
-    "import/no-unresolved": 2,
+    "import/no-unresolved": [
+      2,
+      {
+        "commonjs": true
+      }
+    ],
     "import/no-useless-path-segments": 1,
+    "import/no-webpack-loader-syntax": 2,
     "import/order": [
       1,
       {
@@ -292,18 +331,24 @@
     ],
     "unicorn/custom-error-definition": 2,
     "unicorn/error-message": 2,
-    "unicorn/escape-case": 2,
     "unicorn/new-for-builtins": 2,
     "unicorn/no-array-instanceof": 2,
+    "unicorn/no-console-spaces": 1,
     "unicorn/no-new-buffer": 2,
     "unicorn/no-process-exit": 2,
     "unicorn/no-unreadable-array-destructuring": 2,
-    "unicorn/no-unused-properties": 2,
-    "unicorn/number-literal-case": 2,
-    "unicorn/prefer-add-event-listener": 2,
+    "unicorn/no-unused-properties": 1,
+    "unicorn/prefer-add-event-listener": 1,
+    "unicorn/prefer-dataset": 1,
+    "unicorn/prefer-event-key": 2,
+    "unicorn/prefer-includes": 2,
+    "unicorn/prefer-node-remove": 1,
     "unicorn/prefer-spread": 2,
+    "unicorn/prefer-starts-ends-with": 1,
+    "unicorn/prefer-text-content": 2,
     "unicorn/prefer-type-error": 2,
     "unicorn/regex-shorthand": 2,
+    "unicorn/throw-new-error": 2,
     "node/no-unpublished-bin": 2,
     "node/no-unsupported-features/node-builtins": 2,
     "react/button-has-type": 2,
@@ -313,14 +358,20 @@
         "allowInPropTypes": true
       }
     ],
-    "react/jsx-indent": [
+    "react/jsx-boolean-value": 2,
+    "react/jsx-curly-spacing": [
       2,
+      "never"
+    ],
+    "react/jsx-equals-spacing": [
       2,
-      {
-        "checkAttributes": true
-      }
+      "never"
     ],
     "react/jsx-indent-props": [
+      2,
+      2
+    ],
+    "react/jsx-indent": [
       2,
       2
     ],
@@ -331,7 +382,9 @@
         "max": 5
       }
     ],
-    "react/jsx-no-comment-textnodes": 1,
+    "react/jsx-no-comment-textnodes": 2,
+    "react/jsx-no-duplicate-props": 2,
+    "react/jsx-no-undef": 2,
     "react/jsx-pascal-case": [
       1,
       {
@@ -339,8 +392,18 @@
         "ignore": []
       }
     ],
-    "react/jsx-props-no-multi-spaces": 2,
+    "react/jsx-tag-spacing": [
+      2,
+      {
+        "beforeSelfClosing": "always"
+      }
+    ],
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/no-access-state-in-setstate": 2,
     "react/no-deprecated": 1,
+    "react/no-did-mount-set-state": 1,
+    "react/no-did-update-set-state": 2,
     "react/no-direct-mutation-state": 2,
     "react/no-is-mounted": 1,
     "react/no-multi-comp": [
@@ -382,9 +445,7 @@
       }
     }
   ],
-  "settings": {
-    "react": {
-      "version": "16.8.2"
-    }
+  "globals": {
+    "__DEV__": "readonly"
   }
 }

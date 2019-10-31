@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-standardize",
-  "version": "0.3.7",
+  "version": "0.4.0",
   "main": "./index.js",
   "author": "aMarCruz <amarcruzbox-git@yahoo.com>",
   "description": "My personal configuration based on StandardJS, ready for JavaScript and TypeScript",
@@ -8,9 +8,13 @@
   "bin": {
     "list-eslint-config": "./bin/list-eslint-config.js"
   },
+  "scripts": {
+    "test": "cd test && eslint -f unix --ext .js,.ts,.tsx ./fixtures && cd .. && echo Test passed.",
+    "pretest": "node ./test/create.js"
+  },
   "files": [
     "index.js",
-    ".prettier*",
+    "prettier*",
     "lib",
     "bin",
     "node-only",
@@ -28,7 +32,7 @@
     "lint"
   ],
   "engines": {
-    "node": ">=6.24"
+    "node": ">=8.0"
   },
   "bugs": "https://github.com/aMarCruz/eslint-config-standardize/issues",
   "homepage": "https://github.com/aMarCruz/eslint-config-standardize",
@@ -39,28 +43,29 @@
   "dependencies": {
     "@jsbits/deep-clone": "^1.1.1",
     "confusing-browser-globals": "*",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-react": "^7.12.4",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-unicorn": "^8.0.0"
+    "eslint-config-standard": "~14.1.0",
+    "eslint-plugin-import": "~2.18.2",
+    "eslint-plugin-node": "~10.0.0",
+    "eslint-plugin-promise": "~4.2.1",
+    "eslint-plugin-react": "~7.16.0",
+    "eslint-plugin-standard": "~4.0.1",
+    "eslint-plugin-unicorn": "~12.1.0"
   },
   "devDependencies": {
-    "@types/node": "^11.9.4",
-    "@types/react": "^16.8.3",
-    "@typescript-eslint/eslint-plugin": "^1.4.0",
-    "eslint": "~5.12.0",
-    "prettier": "./prettier",
-    "prettierx": "^0.6.0",
+    "@types/node": "~12.12.3",
+    "@types/react": "~16.9.11",
+    "@typescript-eslint/parser": "^2.6.0",
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "eslint": "6.0.0",
+    "prettier": "file:./prettier",
+    "prettierx": "^0.8.0",
     "react": "^16.8.2",
-    "typescript": "^3.3.3"
+    "typescript": "~3.6.4"
   },
   "optionalDependencies": {
-    "@typescript-eslint/eslint-plugin": "^1.4.0"
+    "@typescript-eslint/eslint-plugin": "^2.6.0"
   },
   "peerDependencies": {
-    "eslint": "^5.12.0"
+    "eslint": ">=6.0"
   }
 }

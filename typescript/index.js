@@ -1,19 +1,10 @@
+/* eslint max-len:[2,{code:120}] */
 const standardConf = require('eslint-config-standard')
 
 const OFF = 0
 const ON = 2
 
-const allExtensions = [
-  '.js',
-  '.jsx',
-  '.mjs',
-  '.android.js',
-  '.ios.js',
-  '.web.js',
-  '.ts',
-  '.tsx',
-  '.d.ts',
-]
+const allExtensions = ['.js', '.jsx', '.mjs', '.android.js', '.ios.js', '.web.js', '.ts', '.tsx', '.d.ts']
 
 module.exports = {
   parser: '@typescript-eslint/parser',
@@ -39,21 +30,23 @@ module.exports = {
     project://node_modules/@typescript-eslint/eslint-plugin/lib/configs/recommended.json
   */
   rules: {
-    camelcase: OFF,
-    indent: OFF,
+    'camelcase': OFF,
+    'indent': OFF,
     '@typescript-eslint/adjacent-overload-signatures': ON,
-    '@typescript-eslint/array-type': [ON, 'array-simple'],
+    '@typescript-eslint/array-type': [ON, { default: 'array' }],
     '@typescript-eslint/ban-types': ON,
     '@typescript-eslint/camelcase': standardConf.rules.camelcase,
     '@typescript-eslint/class-name-casing': ON,
+    '@typescript-eslint/consistent-type-assertions': [
+      ON,
+      { assertionStyle: 'as', objectLiteralTypeAssertions: 'allow-as-parameter' },
+    ],
     '@typescript-eslint/indent': standardConf.rules.indent,
     '@typescript-eslint/member-delimiter-style': [ON, { multiline: { delimiter: 'none' } }],
     '@typescript-eslint/member-naming': [ON, { private: '^_' }],
-    '@typescript-eslint/no-angle-bracket-type-assertion': ON,
     '@typescript-eslint/no-for-in-array': ON,
     '@typescript-eslint/no-inferrable-types': ON,
     '@typescript-eslint/no-misused-new': ON,
-    '@typescript-eslint/no-object-literal-type-assertion': ON,
     '@typescript-eslint/no-parameter-properties': ON,
     '@typescript-eslint/prefer-namespace-keyword': ON,
     '@typescript-eslint/type-annotation-spacing': ON,
