@@ -1,5 +1,20 @@
 # Changes for eslint-config-standardize
 
+## \[0.5.0] - 2019-11-21
+
+### Added
+
+- [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
+- [preact](https://www.npmjs.com/package/preact) config.
+
+### Changed
+
+- '@typescript-eslint/member-delimiter-style' singleline delimiter to 'comma'
+- Update Prettierx to v0.10.0, based on Prettier 1.9.1
+- Update fake Prettier package to report version 1.9.1
+- Minimum ESLint 6.2.2
+- Internal: rename lib/get-conf.js to lib/merged-conf.js
+
 ## \[0.4.2] - 2019-11-01
 
 ### Changed

@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-standardize",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "main": "./index.js",
   "author": "aMarCruz <amarcruzbox-git@yahoo.com>",
   "description": "My personal configuration based on StandardJS, ready for JavaScript and TypeScript",
@@ -48,24 +48,25 @@
     "eslint-plugin-node": "~10.0.0",
     "eslint-plugin-promise": "~4.2.1",
     "eslint-plugin-react": "~7.16.0",
+    "eslint-plugin-react-hooks": "~2.3.0",
     "eslint-plugin-standard": "~4.0.1",
-    "eslint-plugin-unicorn": "~12.1.0"
+    "eslint-plugin-unicorn": "~13.0.0"
   },
   "devDependencies": {
-    "@types/node": "~12.12.3",
+    "@types/node": "~12.12.11",
     "@types/react": "~16.9.11",
-    "@typescript-eslint/parser": "^2.6.0",
-    "@typescript-eslint/eslint-plugin": "^2.6.0",
-    "eslint": "6.0.1",
+    "@typescript-eslint/parser": "~2.8.0",
+    "@typescript-eslint/eslint-plugin": "~2.8.0",
+    "eslint": "6.2.2",
     "prettier": "file:./prettier",
-    "prettierx": "^0.8.0",
-    "react": "^16.8.2",
-    "typescript": "~3.6.4"
+    "prettierx": "~0.10.0",
+    "react": "~16.8.3",
+    "typescript": "~3.7.2"
   },
   "optionalDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.6.0"
+    "@typescript-eslint/eslint-plugin": "~2.8.0"
   },
   "peerDependencies": {
-    "eslint": ">=6.0.1"
+    "eslint": ">=6.2.2"
   }
 }

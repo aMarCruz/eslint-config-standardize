@@ -5,7 +5,7 @@ const ON = 2
 module.exports = {
   settings: {
     react: {
-      version: '16.10',
+      version: '16.12',
       pragma: 'h',
     },
   },

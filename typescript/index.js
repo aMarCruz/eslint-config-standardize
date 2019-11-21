@@ -3,6 +3,7 @@ const standardConf = require('eslint-config-standard')
 
 const OFF = 0
 const ON = 2
+// const WARN = 1
 
 const allExtensions = ['.js', '.jsx', '.mjs', '.android.js', '.ios.js', '.web.js', '.ts', '.tsx', '.d.ts']
 
@@ -42,7 +43,10 @@ module.exports = {
       { assertionStyle: 'as', objectLiteralTypeAssertions: 'allow-as-parameter' },
     ],
     '@typescript-eslint/indent': standardConf.rules.indent,
-    '@typescript-eslint/member-delimiter-style': [ON, { multiline: { delimiter: 'none' } }],
+    '@typescript-eslint/member-delimiter-style': [
+      ON,
+      { multiline: { delimiter: 'none' }, singleline: { delimiter: 'comma' } },
+    ],
     '@typescript-eslint/member-naming': [ON, { private: '^_' }],
     '@typescript-eslint/no-for-in-array': ON,
     '@typescript-eslint/no-inferrable-types': ON,
@@ -54,8 +58,10 @@ module.exports = {
 
   overrides: [
     {
-      files: ['*.ts', '*.tsx'],
+      files: ['**/*.ts', '**/*.tsx'],
       rules: {
+        'brace-style': OFF,
+        'func-call-spacing': OFF,
         'no-redeclare': OFF, // avoid conflicts when exporting function+namespace
         'import/named': OFF,
         'import/export': OFF,
@@ -65,8 +71,10 @@ module.exports = {
         'no-undef': OFF, // handled by TS
         'no-unused-vars': OFF, // handled by TS `noUnusedLocals`
         'no-use-before-define': OFF,
-        '@typescript-eslint/no-use-before-define': OFF, // [ON, { functions: false, typedefs: false }],
+        '@typescript-eslint/brace-style': standardConf.rules['brace-style'],
+        '@typescript-eslint/func-call-spacing': standardConf.rules['func-call-spacing'],
         '@typescript-eslint/no-array-constructor': ON,
+        '@typescript-eslint/no-use-before-define': OFF, // [ON, { functions: false, typedefs: false }],
         '@typescript-eslint/no-var-requires': ON,
       },
     },

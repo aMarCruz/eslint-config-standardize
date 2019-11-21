@@ -3,7 +3,7 @@
 [![License][license-badge]][license-url]
 [![npm Version][npm-badge]][npm-url]
 
-For use with ESLint v6.0.1, for ESLint v5.x use eslint-config-standardize 0.3.x
+For use with ESLint v6.2.2 and above, for ESLint v5.x use eslint-config-standardize 0.3.x
 
 Minimum NodeJS version supported: NodeJS 8 - deprecated; NodeJS 10 is recommended as described in [brodybits/prettierx#6](https://github.com/brodybits/prettierx/issues/6)
 
@@ -73,6 +73,7 @@ You can mix the "standardize/preact" with "standardize/typescript" configs.
 - [node](https://www.npmjs.com/package/eslint-plugin-node)
 - [promise](https://www.npmjs.com/package/eslint-plugin-promise)
 - [react](https://www.npmjs.com/package/eslint-plugin-react)
+- [react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 - [standard](https://www.npmjs.com/package/eslint-plugin-standard)
 - [unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn)
 
