@@ -20,4 +20,4 @@
     'plugin:prettierx/standardize'
   ]
 */
-module.exports = require('./lib/get-conf')
+module.exports = require('./lib/merged-conf')
