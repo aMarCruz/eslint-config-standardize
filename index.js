@@ -6,8 +6,8 @@
 
   Plugins:
   project://node_modules/eslint-plugin-import/lib/index.js
-  project://node_modules/eslint-plugin-node/lib/index.js &
-  project://node_modules/eslint-plugin-node/lib/configs/recommended.json
+  project://node_modules/eslint-plugin-node/lib/index.js
+  project://node_modules/eslint-plugin-node/lib/configs/recommended.js
   project://node_modules/eslint-plugin-promise/index.js
   project://node_modules/eslint-plugin-react/index.js
   project://node_modules/eslint-plugin-unicorn/index.js

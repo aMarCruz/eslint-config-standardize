@@ -118,16 +118,20 @@ Prettier: [`quoteProps`](https://prettier.io/docs/en/options.html#quote-props)
 
 ## Prettier
 
-If you like PrettierX but you are using some tool that requires Prettier, in the ./node_modules/eslint-config-standardize/prettier you will find a package that will redirect `require`s for Prettier to PrettierX. You can copy this folder to the root of your App or install from there.
-
-Copy the fake package from node_modules, install prettierx then the local prettier:
-
-In linux/mac run this commands:
+If you like PrettierX but you are using some tool that requires Prettier, use [aMarCruz/prettier](https://github.com/aMarCruz/prettier).
 
 ```sh
-mkdir .prettier
-cp ./node_modules/eslint-config-standardize/prettier/* .prettier/
-yarn add prettierx file:.prettier -D
+yarn add aMarCruz/prettier -D
+# or
+npm i aMarCruz/prettier -D
+```
+
+with a version number:
+
+```sh
+yarn add aMarCruz/prettier#1.19.1 -D
+# or
+npm i aMarCruz/prettier#1.19.1 -D
 ```
 
 ### eslint-plugin-prettierx

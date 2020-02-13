@@ -1,5 +1,25 @@
 # Changes for eslint-config-standardize
 
+## \[0.6.0] - 2019-11-27
+
+### Added
+
+- ['@typescript-eslint/await-thenable'](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/await-thenable.md) as warn.
+- ['react/jsx-no-script-url'](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-script-url.md) using defaults as error.
+- ['prefer-arrow-callback'](https://eslint.org/docs/rules/prefer-arrow-callback) using defaults as error.
+
+### Changed
+
+- Updated dependencies.
+- Set ['no-useless-constructor'](https://eslint.org/docs/rules/no-useless-constructor) to error (the StandardJS seeting).
+
+### Removed
+
+- ['no-catch-shadow'](https://eslint.org/docs/rules/no-catch-shadow)
+- ['require-await'](https://eslint.org/docs/rules/require-await)
+- Dependency on _eslint-config-standard_.
+- The fake Prettier package now lives in [aMarCruz/prettier](https://github.com/aMarCruz/prettier).
+
 ## \[0.5.0] - 2019-11-21
 
 ### Added

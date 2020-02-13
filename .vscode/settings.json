@@ -1,4 +1,8 @@
 {
+  "files.associations": {
+    "lib/*.json": "jsonc",
+    "src/*.json": "jsonc",
+  },
   "eslint.autoFixOnSave": true,
   "eslint.packageManager": "yarn",
   "eslint.validate": [
@@ -20,7 +24,13 @@
   "[json]": {
     "editor.formatOnSave": true
   },
+  "[jsonc]": {
+    "editor.formatOnSave": true
+  },
   "files.exclude": {
     "**/node_modules": false
-  }
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
 }
