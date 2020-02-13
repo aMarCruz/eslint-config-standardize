@@ -3,13 +3,11 @@
 [![License][license-badge]][license-url]
 [![npm Version][npm-badge]][npm-url]
 
-For use with ESLint v6.2.2 and above, for ESLint v5.x use eslint-config-standardize 0.3.x
+For use with ESLint v6.7.2 and above, for previous versions use eslint-config-standardize 0.5.x or bellow.
 
-Minimum NodeJS version supported: NodeJS 8 - deprecated; NodeJS 10 is recommended as described in [brodybits/prettierx#6](https://github.com/brodybits/prettierx/issues/6)
+Minimum NodeJS version supported: 10.13, 12.0, or above (ESLint 6.8 compatible).
 
 ## Note
-
-In v0.4 there are breaking changes, please see the [Changelog](CHANGELOG.md) for more info.
 
 If you are using the [(fake) Prettier](#prettier) package, please update it.
 

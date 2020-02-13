@@ -10,6 +10,7 @@
 
 ### Changed
 
+- Require NodeJS 10.13, 12.0, or above (compatibile with ESLint 6.8)
 - Updated dependencies.
 - Set ['no-useless-constructor'](https://eslint.org/docs/rules/no-useless-constructor) to error (the StandardJS seeting).
 
