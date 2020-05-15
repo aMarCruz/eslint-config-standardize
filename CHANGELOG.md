@@ -1,16 +1,18 @@
 # Changes for eslint-config-standardize
 
-## \[0.6.0] - 2019-11-27
+## \[0.6.0] - 2020-05-14
 
 ### Added
 
-- ['@typescript-eslint/await-thenable'](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/await-thenable.md) as warn.
 - ['react/jsx-no-script-url'](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-script-url.md) using defaults as error.
 - ['prefer-arrow-callback'](https://eslint.org/docs/rules/prefer-arrow-callback) using defaults as error.
 
 ### Changed
 
+- Rename `unicorn/regex-shorthand` rule to `unicorn/better-regex`
 - Require NodeJS 10.13, 12.0, or above (compatibile with ESLint 6.8)
+- Minimum ESLint 6.8.0
+- Update Prettierx to v0.12.0
 - Updated dependencies.
 - Set ['no-useless-constructor'](https://eslint.org/docs/rules/no-useless-constructor) to error (the StandardJS seeting).
 

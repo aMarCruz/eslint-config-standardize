@@ -3,7 +3,7 @@
 [![License][license-badge]][license-url]
 [![npm Version][npm-badge]][npm-url]
 
-For use with ESLint v6.7.2 and above, for previous versions use eslint-config-standardize 0.5.x or bellow.
+For use with ESLint v6.8.0 and above, for previous versions use eslint-config-standardize 0.5.x or bellow.
 
 Minimum NodeJS version supported: 10.13, 12.0, or above (ESLint 6.8 compatible).
 
@@ -16,9 +16,9 @@ If you are using the [(fake) Prettier](#prettier) package, please update it.
 Install from npm (omit eslint if it's already installed or you are using CRA).
 
 ```sh
-npm i eslint@6.x eslint-config-standardize -D
+npm i eslint@6.8.x eslint-config-standardize -D
 # or
-yarn add eslint@6.x eslint-config-standardize -D
+yarn add eslint@6.8.x eslint-config-standardize -D
 ```
 
 In your ESLint config file:
@@ -127,9 +127,9 @@ npm i aMarCruz/prettier -D
 with a version number:
 
 ```sh
-yarn add aMarCruz/prettier#1.19.1 -D
+yarn add aMarCruz/prettier#1.19.2 -D
 # or
-npm i aMarCruz/prettier#1.19.1 -D
+npm i aMarCruz/prettier#1.19.2 -D
 ```
 
 ### eslint-plugin-prettierx

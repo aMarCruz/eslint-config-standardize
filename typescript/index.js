@@ -3,7 +3,7 @@ const standardConf = require('eslint-config-standard')
 
 const OFF = 0
 const ON = 2
-const WARN = 1
+// const WARN = 1
 
 const allExtensions = ['.js', '.jsx', '.mjs', '.android.js', '.ios.js', '.web.js', '.ts', '.tsx', '.d.ts']
 
@@ -50,7 +50,6 @@ module.exports = {
 
         '@typescript-eslint/adjacent-overload-signatures': ON,
         '@typescript-eslint/array-type': [ON, { default: 'array' }],
-        '@typescript-eslint/await-thenable': WARN,
         '@typescript-eslint/ban-types': ON,
         '@typescript-eslint/brace-style': standardConf.rules['brace-style'],
         '@typescript-eslint/camelcase': standardConf.rules.camelcase,
