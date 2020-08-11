@@ -1,5 +1,11 @@
 # Changes for eslint-config-standardize
 
+## \[0.7.1] - 2020-08-10
+
+### Changed
+
+- Update internal `aMarCruz/prettier` to v2.0.5 (prettierx 0.14.0)
+
 ## \[0.7.0] - 2020-08-10
 
 ### Added
