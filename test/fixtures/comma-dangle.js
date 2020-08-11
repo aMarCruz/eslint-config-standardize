@@ -4,24 +4,19 @@
 const fun = () => {}
 let arr, obj
 
-/* eslint comma-dangle: [2, 'always'] */
-arr = [1, 2,]
-arr = [
-  1,
-  2,
-]
-arr = [1, 2,]
+arr = [1, 2]
 arr = [
   1,
   2,
 ]
 
+obj = { a: 1, b: 2 }
+obj = {
+  a: 1,
+  b: 2,
+}
+
 fun(1, 2)
-fun(1, 2)
-fun(
-  1,
-  2
-)
 fun(
   1,
   2

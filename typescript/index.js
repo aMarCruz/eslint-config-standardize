@@ -7,6 +7,32 @@ const ON = 2
 
 const allExtensions = ['.js', '.jsx', '.mjs', '.android.js', '.ios.js', '.web.js', '.ts', '.tsx', '.d.ts']
 
+const namingConventionOpts = [
+  {
+    selector: 'default',
+    format: ['camelCase', 'PascalCase', 'snake_case', 'UPPER_CASE'],
+    leadingUnderscore: 'allow',
+    trailingUnderscore: 'forbid',
+  },
+  {
+    selector: 'default',
+    format: ['camelCase', 'snake_case', 'UPPER_CASE'],
+    modifiers: ['private'],
+    leadingUnderscore: 'require',
+    trailingUnderscore: 'allow',
+  },
+  {
+    selector: 'class',
+    format: ['PascalCase', 'UPPER_CASE'],
+  },
+  {
+    selector: 'typeLike',
+    format: ['PascalCase'],
+    leadingUnderscore: 'allow',
+    trailingUnderscore: 'allow',
+  },
+]
+
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -46,24 +72,24 @@ module.exports = {
         'no-redeclare': OFF, // avoid conflicts when exporting function+namespace
         'no-undef': OFF, // handled by TS
         'no-unused-vars': OFF, // handled by TS `noUnusedLocals`
+        'no-unused-expressions': OFF,
         'no-use-before-define': OFF,
 
         '@typescript-eslint/adjacent-overload-signatures': ON,
         '@typescript-eslint/array-type': [ON, { default: 'array' }],
         '@typescript-eslint/ban-types': ON,
         '@typescript-eslint/brace-style': standardConf.rules['brace-style'],
-        '@typescript-eslint/camelcase': standardConf.rules.camelcase,
-        '@typescript-eslint/class-name-casing': ON,
         '@typescript-eslint/consistent-type-assertions': [ON, { assertionStyle: 'as', objectLiteralTypeAssertions: 'allow-as-parameter' }],
         '@typescript-eslint/func-call-spacing': standardConf.rules['func-call-spacing'],
         '@typescript-eslint/indent': standardConf.rules.indent,
         '@typescript-eslint/member-delimiter-style': [ON, { multiline: { delimiter: 'none' }, singleline: { delimiter: 'comma' } }],
-        '@typescript-eslint/member-naming': [ON, { private: '^_' }],
+        '@typescript-eslint/naming-convention': [ON, ...namingConventionOpts],
         '@typescript-eslint/no-array-constructor': ON,
         '@typescript-eslint/no-for-in-array': ON,
         '@typescript-eslint/no-inferrable-types': ON,
         '@typescript-eslint/no-misused-new': ON,
         '@typescript-eslint/no-parameter-properties': ON,
+        '@typescript-eslint/no-unused-expressions': standardConf.rules['no-unused-expressions'],
         '@typescript-eslint/no-use-before-define': OFF, // [ON, { functions: false, typedefs: false }],
         '@typescript-eslint/no-var-requires': ON,
         '@typescript-eslint/prefer-namespace-keyword': ON,

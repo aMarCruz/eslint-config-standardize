@@ -1,5 +1,38 @@
 # Changes for eslint-config-standardize
 
+## \[0.7.0] - 2020-08-10
+
+### Added
+
+- `impliedStrict: true` to `parserOptions`
+- `default-case-last` if running ESLint 7.0
+- `default-param-last`
+- `no-constructor-return`
+- `no-useless-backreference` if running ESLint 7.0
+- `for-direction` as error
+- `no-dupe-else-if` as error
+- `no-setter-return`
+- `no-import-assign`
+- `node/no-mixed-requires`
+- `node/no-deprecated-api`
+- `@typescript-eslint/naming-convention` to replace obsolete rules.
+
+### Changed
+
+- Use `es2017` instead `es6` in the `env` block.
+- Use `@typescript-eslint/no-unused-expressions` to allow TS 3.7 "Optional Chaining".
+- Replaced deprecated ESLint `no-native-reassign` with `no-global-assign`
+- Replaced deprecated ESLint `no-process-exit` with `node/no-process-exit`
+- Replaced deprecated ESLint `no-buffer-constructor`, this is included in `node/no-deprecated-api`
+- Changed options for `import/no-cycle` to `{ maxDepth: 3, ignoreExternal: true }`
+
+### Removed
+
+- `@typescript-eslint/camelcase`
+- `@typescript-eslint/class-name-casing`
+- `@typescript-eslint/member-naming`
+- `unicorn/no-process-exit`
+
 ## \[0.6.1] - 2020-05-14
 
 ### Changed
@@ -27,6 +60,8 @@
 - Require NodeJS 10.13, 12.0, or above (compatible with ESLint 6.8)
 - Updated dependencies.
 - Set ['no-useless-constructor'](https://eslint.org/docs/rules/no-useless-constructor) to error (the StandardJS seeting).
+- Updated dependencies
+- Fixed tests
 
 ### Removed
 

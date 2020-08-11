@@ -7,13 +7,14 @@
 */
 import * as React from 'react';
 
-type Props = { foo: typeof Foo; bar: readonly string[][] }
+type Props = { foo: typeof Foo, bar: readonly string[][] }
 type Dict = { [k: string]: React.Ref<any> }
 
 class Test1 extends React.Component<Props> {
   render () {
     // no-unused-vars must be off. Comment next line to show the TS warning
-    // @ts-ignore
+    /* eslint-disable @typescript-eslint/no-var-requires */
+    // @ts-expect-error
     const React2 = require('react').createRef();
     const foo: Dict = {};
     foo.bar = React.createRef();
