@@ -3,9 +3,9 @@
 [![License][license-badge]][license-url]
 [![npm Version][npm-badge]][npm-url]
 
-For use with ESLint v6.8.0 and above, for previous versions use eslint-config-standardize 0.5.x or bellow.
+For use with ESLint v7.15.0 and above, for previous versions use eslint-config-standardize 0.6.x or bellow.
 
-Minimum NodeJS version supported: 10.13, 12.0, or above (ESLint 6.8 compatible).
+Minimum NodeJS version supported: 10.13, 12.0, or above (ESLint 7 compatible).
 
 ## Note
 
@@ -16,9 +16,9 @@ If you are using the [(fake) Prettier](#prettier) package, please update it.
 Install from npm (omit eslint if it's already installed or you are using CRA).
 
 ```sh
-npm i eslint@6.8.x eslint-config-standardize -D
+npm i eslint@^7.15.0 eslint-config-standardize -D
 # or
-yarn add eslint@6.8.x eslint-config-standardize -D
+yarn add eslint@^7.15.0 eslint-config-standardize -D
 ```
 
 In your ESLint config file:
@@ -72,7 +72,6 @@ You can mix the "standardize/preact" with "standardize/typescript" configs.
 - [promise](https://www.npmjs.com/package/eslint-plugin-promise)
 - [react](https://www.npmjs.com/package/eslint-plugin-react)
 - [react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
-- [standard](https://www.npmjs.com/package/eslint-plugin-standard)
 - [unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn)
 
 ## Differences vs StandardJS
@@ -127,16 +126,12 @@ npm i aMarCruz/prettier -D
 with a version number:
 
 ```sh
-yarn add aMarCruz/prettier#1.19.2 -D
+yarn add aMarCruz/prettier#2.2.0 -D
 # or
-npm i aMarCruz/prettier#1.19.2 -D
+npm i aMarCruz/prettier#2.2.0 -D
 ```
 
 ### eslint-plugin-prettierx
-
-| WARNING                                                                 |
-| ----------------------------------------------------------------------- |
-| From v0.3.2 you must set the 'standardize' config in "extends" manually |
 
 The [eslint-plugin-prettierx](https://github.com/aMarCruz/eslint-plugin-prettierx) can be used to format JS code. It have a preset for the standardize bundle.
 

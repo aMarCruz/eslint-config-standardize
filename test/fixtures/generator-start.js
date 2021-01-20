@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars, comma-spacing,
-   standard/array-bracket-even-spacing, node/no-unsupported-features/es-syntax */
+   node/no-unsupported-features/es-syntax */
 /* eslint-env es6 */
 
 /* eslint generator-star-spacing: ["error", {"before": true, "after": true}] */

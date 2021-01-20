@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars, comma-spacing,
-   standard/array-bracket-even-spacing, node/no-unsupported-features/es-syntax */
+   node/no-unsupported-features/es-syntax */
 
 const fun = () => {}
 let arr, obj

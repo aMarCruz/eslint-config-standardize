@@ -1,11 +1,11 @@
 {
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaVersion": 2021,
     "impliedStrict": true,
     "sourceType": "module"
   },
   "env": {
-    "es2017": true,
+    "es2021": true,
     "node": true
   },
   "settings": {
@@ -37,7 +37,6 @@
     "import",
     "node",
     "promise",
-    "standard",
     "unicorn",
     "react",
     "react-hooks"
@@ -67,7 +66,6 @@
       "prefer-double"
     ],
     "max-depth": 1,
-    "no-case-declarations": 1,
     "no-misleading-character-class": 2,
     "spaced-comment": [
       2,

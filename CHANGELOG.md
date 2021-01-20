@@ -1,5 +1,18 @@
 # Changes for eslint-config-standardize
 
+## \[0.7.2] - 2021-01-19
+
+### Changed
+
+- Use the default StandardJS level (error) for `no-case-declarations`
+- Use wide version range for typescript-eslint devDependencies.
+- Set `parserOptions.ecmaVersion:2021` (12) and `env.es2021:true`
+- Updated prettierx to 0.16.0, TS to 4.x and other dependencies.
+
+### Removed
+
+- eslint-plugin-standard - see [standard#1316](https://github.com/standard/standard/issues/1316)
+
 ## \[0.7.1] - 2020-08-10
 
 ### Changed
