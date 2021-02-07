@@ -3,22 +3,18 @@
 [![License][license-badge]][license-url]
 [![npm Version][npm-badge]][npm-url]
 
-For use with ESLint v7.15.0 and above, for previous versions use eslint-config-standardize 0.6.x or bellow.
+For use with ESLint v7.17.0 and above, for previous versions use eslint-config-standardize 0.7.x or bellow.
 
 Minimum NodeJS version supported: 10.13, 12.0, or above (ESLint 7 compatible).
-
-## Note
-
-If you are using the [(fake) Prettier](#prettier) package, please update it.
 
 ## Setup
 
 Install from npm (omit eslint if it's already installed or you are using CRA).
 
 ```sh
-npm i eslint@^7.15.0 eslint-config-standardize -D
+npm i eslint eslint-config-standardize -D
 # or
-yarn add eslint@^7.15.0 eslint-config-standardize -D
+yarn add eslint eslint-config-standardize -D
 ```
 
 In your ESLint config file:
@@ -33,7 +29,7 @@ module.exports = {
 
 ### With TypeScript
 
-If you are using TypeScript add "standardize/typescript" in "extends".
+If you are using TypeScript, add "standardize/typescript" in "extends".
 
 ```bash
 yarn add @typescript-eslint/parser @typescript-eslint/eslint-plugin -D
@@ -49,21 +45,11 @@ module.exports = {
 }
 ```
 
-### With Preact
+### With React or Preact
 
-In your eslint config
+You don't need to do anything else, the config automatically detects React and Preact.
 
-```js
-// .eslintrc.js
-module.exports = {
-  root: true, // optional, avoids searching upwards
-  extends: ['standardize', 'standardize/preact'],
-}
-```
-
-#### Note
-
-You can mix the "standardize/preact" with "standardize/typescript" configs.
+"standardize/preact" is no longer needed and has been removed.
 
 ## Included Plugins
 
@@ -80,7 +66,7 @@ Standardize uses a more strict and opinionated configuration than Standard, so a
 
 ### Multiline Ternary
 
-Both Prettier and ESLint have some bugs and this is a mess, altough the result seems to be inlined to StandardJS rules. See [Known Issues](#known-issues).
+The formating of multiline ternary is a mess, altough the result seems to be inlined with the StandardJS rules. See [Known Issues](#known-issues).
 
 ### Trailing Commas
 
@@ -113,24 +99,6 @@ Both Prettier and StandardJS enclose the properties in quotes "as needed", this 
 ESLint rule: [`quote-props`](https://eslint.org/docs/rules/quote-props)
 Prettier: [`quoteProps`](https://prettier.io/docs/en/options.html#quote-props)
 
-## Prettier
-
-If you like PrettierX but you are using some tool that requires Prettier, use [aMarCruz/prettier](https://github.com/aMarCruz/prettier).
-
-```sh
-yarn add aMarCruz/prettier -D
-# or
-npm i aMarCruz/prettier -D
-```
-
-with a version number:
-
-```sh
-yarn add aMarCruz/prettier#2.2.0 -D
-# or
-npm i aMarCruz/prettier#2.2.0 -D
-```
-
 ### eslint-plugin-prettierx
 
 The [eslint-plugin-prettierx](https://github.com/aMarCruz/eslint-plugin-prettierx) can be used to format JS code. It have a preset for the standardize bundle.
@@ -139,7 +107,7 @@ This example is using standardize with the prettierx plugin:
 
 ```bash
 # install requirements
-yarn add eslint eslint-plugin-prettierx eslint-install-standardize
+yarn add eslint eslint-plugin-prettierx eslint-config-standardize
 ```
 
 Configure eslint:
@@ -173,7 +141,7 @@ Thanks for your support!
 
 ## License
 
-The [MIT](LICENSE) License &copy; 2019 Alberto Martínez
+The [MIT](LICENSE) License &copy; 2019-2020 Alberto Martínez
 
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-url]: https://github.com/aMarCruz/eslint-config-standardize/blob/master/LICENSE

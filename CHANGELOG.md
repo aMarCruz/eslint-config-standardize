@@ -1,5 +1,16 @@
 # Changes for eslint-config-standardize
 
+## \[0.8.0] - 2021-02-07
+
+### Changed
+
+- Autodetect React and Preact installations.
+- Updated prettierx to 0.17.0
+
+### Removed
+
+- Preact config, not longer needed.
+
 ## \[0.7.2] - 2021-01-19
 
 ### Changed
