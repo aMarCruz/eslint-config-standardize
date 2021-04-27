@@ -1,14 +1,9 @@
-/* eslint-disable no-unused-vars, comma-spacing,
-   node/no-unsupported-features/es-syntax */
+/* eslint-disable no-unused-vars */
 
 const fun = () => {}
-let arr, obj
+let obj
 
-arr = [1, 2]
-arr = [
-  1,
-  2,
-]
+const arr = [1, 2]
 
 obj = { a: 1, b: 2 }
 obj = {
@@ -17,7 +12,3 @@ obj = {
 }
 
 fun(1, 2)
-fun(
-  1,
-  2
-)

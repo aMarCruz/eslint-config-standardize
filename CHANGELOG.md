@@ -1,5 +1,65 @@
 # Changes for eslint-config-standardize
 
+## \[0.9.0] - 2021-04-27
+
+### added
+
+- `no-return-await` as "warn"
+- `no-useless-constructor` as "error"
+- `node/no-unpublished-require` as "error"
+- `node/shebang` as "error"
+- `unicorn/no-array-push-push` as "warn"
+- `unicorn/prefer-array-index-of` as "warn"
+- `unicorn/prefer-date-now` as "warn"
+- `@typescript-eslint/default-param-last` as "error" (extends the ESlint rule)
+- `@typescript-eslint/no-dupe-class-members` as "error" (extends the ESlint rule)
+- `@typescript-eslint/no-duplicate-imports` as "error" (extends the ESlint rule)
+- `@typescript-eslint/no-redeclare` as "error" (extends the ESlint rule)
+- `react/no-children-prop` as "error"
+- `react/no-danger-with-children` as "error"
+- `react/no-find-dom-node` as "error"
+- `react/no-render-return-value` as "error"
+- `react/no-this-in-sfc` as "error"
+- `react/void-dom-elements-no-children` as "error"
+- `react/jsx-no-bind` as "error"
+- `react/jsx-no-target-blank` as "error" with `enforceDynamicLinks:always`
+- `react/jsx-no-useless-fragment` as "error"
+
+### Removed
+
+- `no-restricted-syntax` as "WithStatement" is replaced with `no-with`
+- `prefer-arrow-callback` (was "off")
+- `@typescript-eslint/array-type` as it's too opinionated
+- `import/named` (was "error")
+
+### Changed
+
+- Add `document`, `navigator`, `window` to ESLint `globals`, as StandardJS does.
+- Add `convertPath` option to `settings/node` for "./src/bin" to "./bin" translation.
+- Add options to allow "amd" in `import/no-absolute-path`
+- Add `"#__INLINE__"` and `"#__NOINLINE__"` to markers of block in `spaced-comment`
+- Add `noTemplateLiterals` option to `react/no-string-refs`
+- Change `complexity` from 10 to 12
+- Change `curly` from "error" to "warn"
+- Change `commentPattern` from "^no ?default$" to "^no default$" (require space) in `default-case`.
+- Change `react/jsx-max-depth` from 5 to 6
+- Change `unicorn/no-unreadable-array-destructuring` from "error" to "warn"
+- Change `unicorn/better-regex` from "error" to "warn"
+- Replaced `unicorn/no-array-instanceof` with `unicorn/no-instanceof-array`
+- Replaced `unicorn/prefer-text-content` with `unicorn/prefer-dom-node-text-content`
+- Replaced `unicorn/prefer-node-remove` with `unicorn/prefer-dom-node-remove`
+- Replaced `unicorn/prefer-event-key` with `unicorn/prefer-keyboard-event-key`
+- Replaced `unicorn/prefer-starts-ends-with` with `unicorn/prefer-string-starts-ends-with`
+- Revert `@typescript-eslint/member-delimiter-style` singleline delimiter to 'semi'
+- Remove `allowInPropTypes` option from `react/forbid-foreign-prop-types`
+- Remove `allowAllCaps` option in `react/jsx-pascal-case`
+- Now the rules are extracted and prepared from the prettierx, standard, and standard-jsx configurations at build time, so its packages are not required at runtime and have been moved to `devDependencies`.
+- [eslint-plugin-prettierx](https://www.npmjs.com/package/eslint-plugin-prettierx) is included and enabled in this package. You don't need to include the "eslint-plugin-prettierx/standardize-bundle" configuration.
+- Scripts have been added to package.json to list obsolete and unused rules. This through the [eslint-find-rules](https://www.npmjs.com/package/eslint-find-rules) package.
+- The rule `@typescript-eslint/naming-convention` has been relaxed to allow edge cases.
+- Workaround for typescript-eslint/typescript-eslint#2540 bug with `no-use-before-define`.
+- Update dependencies.
+
 ## \[0.8.0] - 2021-02-07
 
 ### Changed

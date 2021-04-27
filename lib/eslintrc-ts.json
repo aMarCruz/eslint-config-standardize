@@ -1,0 +1,121 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "warnOnUnsupportedTypeScriptVersion": false },
+  "plugins": ["@typescript-eslint"],
+  "settings": {
+    "import/extensions": [
+      ".js",
+      ".jsx",
+      ".mjs",
+      ".android.js",
+      ".ios.js",
+      ".web.js",
+      ".ts",
+      ".tsx",
+      ".d.ts"
+    ],
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".mjs",
+          ".android.js",
+          ".ios.js",
+          ".web.js",
+          ".ts",
+          ".tsx",
+          ".d.ts"
+        ]
+      }
+    },
+    "import/parsers": { "@typescript-eslint/parser": [".ts", ".tsx", ".d.ts"] }
+  },
+  "rules": {
+    "camelcase": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/naming-convention": [
+      "warn",
+      {
+        "selector": ["typeLike", "enum"],
+        "format": ["PascalCase", "UPPER_CASE"],
+        "leadingUnderscore": "forbid",
+        "trailingUnderscore": "allow"
+      },
+      {
+        "selector": ["function", "method"],
+        "format": ["camelCase"],
+        "leadingUnderscore": "allow",
+        "trailingUnderscore": "allow"
+      },
+      {
+        "selector": ["accessor", "classMethod", "classProperty", "parameterProperty"],
+        "format": ["camelCase"],
+        "modifiers": ["private"],
+        "leadingUnderscore": "require",
+        "trailingUnderscore": "allow"
+      },
+      {
+        "selector": "classMethod",
+        "format": null,
+        "filter": { "regex": "^UNSAFE_[a-z]", "match": true }
+      }
+    ],
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      {
+        "classes": true,
+        "enums": true,
+        "functions": false,
+        "typedefs": false,
+        "variables": false
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "rules": {
+        "default-param-last": "off",
+        "no-array-constructor": "off",
+        "no-dupe-class-members": "off",
+        "no-duplicate-imports": "off",
+        "no-redeclare": "off",
+        "no-undef": "off",
+        "no-unused-expressions": "off",
+        "no-unused-vars": "off",
+        "import/export": "off",
+        "import/named": "off",
+        "import/no-named-as-default": "off",
+        "@typescript-eslint/adjacent-overload-signatures": "error",
+        "@typescript-eslint/ban-types": "error",
+        "@typescript-eslint/consistent-type-assertions": [
+          "error",
+          { "assertionStyle": "as", "objectLiteralTypeAssertions": "allow-as-parameter" }
+        ],
+        "@typescript-eslint/default-param-last": "error",
+        "@typescript-eslint/member-delimiter-style": [
+          "error",
+          {
+            "multiline": { "delimiter": "none" },
+            "singleline": { "delimiter": "semi", "requireLast": false }
+          }
+        ],
+        "@typescript-eslint/no-array-constructor": "error",
+        "@typescript-eslint/no-dupe-class-members": "error",
+        "@typescript-eslint/no-duplicate-imports": "error",
+        "@typescript-eslint/no-for-in-array": "error",
+        "@typescript-eslint/no-inferrable-types": "error",
+        "@typescript-eslint/no-misused-new": "error",
+        "@typescript-eslint/no-parameter-properties": "error",
+        "@typescript-eslint/no-redeclare": "error",
+        "@typescript-eslint/no-unused-expressions": [
+          "error",
+          { "allowShortCircuit": true, "allowTernary": true, "allowTaggedTemplates": true }
+        ],
+        "@typescript-eslint/no-var-requires": "error",
+        "@typescript-eslint/prefer-namespace-keyword": "error"
+      }
+    }
+  ]
+}

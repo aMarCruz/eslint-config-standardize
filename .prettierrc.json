@@ -1,22 +1,12 @@
 {
-  "offsetTernaryExpressions": true,
   "arrowParens": "avoid",
   "bracketSpacing": true,
   "generatorStarSpacing": true,
-  "printWidth": 120,
+  "offsetTernaryExpressions": true,
+  "printWidth": 92,
   "quoteProps": "consistent",
   "semi": false,
   "singleQuote": true,
   "spaceBeforeFunctionParen": true,
-  "yieldStarSpacing": true,
-  "overrides": [
-    {
-      "files": ".prettierrc",
-      "options": { "parser": "json" }
-    },
-    {
-      "files": ".babelrc",
-      "options": { "parser": "json" }
-    }
-  ]
+  "yieldStarSpacing": true
 }
