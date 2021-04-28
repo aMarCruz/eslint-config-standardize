@@ -39,10 +39,6 @@ const noUseBeforeDefineOpts = {
 module.exports = {
   parser: '@typescript-eslint/parser',
 
-  parserOptions: {
-    warnOnUnsupportedTypeScriptVersion: false,
-  },
-
   plugins: ['@typescript-eslint'],
 
   settings: {
@@ -71,7 +67,7 @@ module.exports = {
       },
       {
         selector: ['function', 'method'],
-        format: ['camelCase'],
+        format: ['camelCase', 'PascalCase'],
         leadingUnderscore: 'allow',
         trailingUnderscore: 'allow',
       },

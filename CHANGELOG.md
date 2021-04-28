@@ -1,5 +1,12 @@
 # Changes for eslint-config-standardize
 
+## \[0.9.1] - 2001-04-28
+
+### Changed
+
+- Remove `warnOnUnsupportedTypeScriptVersion` to allow TypeScript version check.
+- Include "PascalCase" format for functions and methods in `@typescript-eslint/naming-convention` to allow _Functional Components_ in react and preact.
+
 ## \[0.9.0] - 2021-04-27
 
 ### added

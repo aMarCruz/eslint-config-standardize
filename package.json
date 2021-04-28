@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-standardize",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "main": "./index.js",
   "author": "aMarCruz <amarcruzbox-git@yahoo.com>",
   "description": "My personal configuration based on StandardJS, ready for JavaScript and TypeScript",
@@ -28,6 +28,7 @@
     "preset",
     "prettier",
     "prettierx",
+    "standardjs",
     "lint"
   ],
   "engines": {
